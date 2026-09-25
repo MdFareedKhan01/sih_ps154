@@ -2,26 +2,38 @@
   "name": "ps154",
   "private": true,
   "type": "module",
+  "packageManager": "npm@10.9.2",
+  "engines": {
+    "node": ">=20.12"
+  },
   "workspaces": [
     "packages/*",
     "apps/*"
   ],
   "scripts": {
-    "dev:api": "tsx watch apps/server/src/api.ts",
-    "dev:worker": "tsx watch apps/server/src/worker.ts",
-    "dev:web": "npm run dev -w @ps154/web",
+    "dev": "turbo run dev dev:api dev:worker",
+    "dev:web": "turbo run dev --filter=@ps154/web",
+    "dev:api": "turbo run dev:api",
+    "dev:worker": "turbo run dev:worker",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "check": "turbo run typecheck test build",
     "db:push": "prisma db push",
     "db:trigger": "prisma db execute --file prisma/append-only.sql --schema prisma/schema.prisma",
     "db:seed": "tsx prisma/seed.ts",
     "seed:pack": "tsx apps/server/scripts/seed-pack.ts",
+    "smoke": "tsx apps/server/scripts/smoke.ts",
     "try": "tsx packages/ai/scripts/try.ts",
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "zod": "^4.6.5"
+    "docs:html": "node docs/scripts/build-html.mjs",
+    "postinstall": "node scripts/postinstall.mjs"
   },
   "devDependencies": {
+    "@types/node": "^22.20.4",
+    "prisma": "^6.19.3",
     "tsx": "^4.23.15",
-    "typescript": "^6.0.3"
+    "turbo": "^2.11.4",
+    "typescript": "~6.0.2",
+    "vitest": "^5.0.2"
   }
 }

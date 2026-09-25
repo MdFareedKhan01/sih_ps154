@@ -1,0 +1,9 @@
+# LF everywhere, on every OS. The cached demo pack is keyed to the exact bytes of
+# samples/, and mixed line endings would also make every diff noisy.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.pdf binary
+*.docx binary
+*.pptx binary

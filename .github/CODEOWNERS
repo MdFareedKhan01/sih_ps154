@@ -1,0 +1,18 @@
+# Pull requests automatically request review from the owner of each folder they touch.
+# An owner must have write access to the repository for GitHub to request them.
+# Rule order matters: the last matching line wins.
+
+# A  Deck & narrative    Rehan Fazal           @Rehan9599
+# B  Backend             Farhan Quamar         @quamarfarhan007
+# C  Frontend            Faizan Ahmad Ansari   @Faizan0916
+# D  AI systems, owner   Md Fareed Khan        @MdFareedKhan01
+
+*                   @quamarfarhan007
+/apps/server/       @quamarfarhan007
+/prisma/            @quamarfarhan007
+/apps/web/          @Faizan0916
+/packages/ai/       @MdFareedKhan01
+/samples/           @MdFareedKhan01
+/docs/              @Rehan9599
+/README.md          @Rehan9599
+/packages/shared/   @quamarfarhan007 @Faizan0916 @MdFareedKhan01

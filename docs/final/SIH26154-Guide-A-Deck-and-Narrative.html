@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>SIH26154 — Deck &amp; Narrative Guide (Person A)</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  
+  <style>
+    :root { --ink:#0f172a; --muted:#475569; --line:#cbd5e1; --soft:#f1f5f9; --accent:#0b3d91; }
+    html { font-size: 16px; }
+    body { max-width: 980px; margin: 0 auto; padding: 32px 20px 80px; color: var(--ink);
+           font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; line-height: 1.6; background: #fff; }
+    h1 { font-size: 2rem; line-height: 1.25; border-bottom: 3px solid var(--accent); padding-bottom: .4rem; }
+    h2 { font-size: 1.5rem; margin-top: 2.6rem; border-bottom: 1px solid var(--line); padding-bottom: .25rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.8rem; }
+    a { color: var(--accent); }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .92rem; display: block; overflow-x: auto; }
+    th, td { border: 1px solid var(--line); padding: 6px 10px; vertical-align: top; text-align: left; }
+    th { background: var(--soft); }
+    code { font-family: Consolas, "Cascadia Code", monospace; font-size: .88em; background: var(--soft);
+           padding: 1px 4px; border-radius: 3px; }
+    pre { background: #0f172a; color: #e2e8f0; padding: 14px 16px; border-radius: 6px; overflow-x: auto;
+          font-size: .85rem; line-height: 1.45; }
+    pre code { background: none; color: inherit; padding: 0; }
+    pre.mermaid { background: #fff; color: var(--ink); border: 1px solid var(--line); text-align: center; }
+    blockquote { margin: 1rem 0; padding: .5rem 1rem; border-left: 4px solid var(--accent); background: var(--soft); }
+    ul.task-list, ul:has(> li > label > input[type=checkbox]) { list-style: none; padding-left: 1rem; }
+    nav#TOC { background: var(--soft); border: 1px solid var(--line); border-radius: 6px; padding: 8px 20px; margin: 1.5rem 0; }
+    nav#TOC ul { margin: .2rem 0; }
+    @media print { pre { white-space: pre-wrap; } nav#TOC { display: none; } }
+  </style>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'strict' });
+  </script>
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#sih26154--deck--narrative-guide-person-a"
+id="toc-sih26154--deck--narrative-guide-person-a">SIH26154 — Deck &amp;
+Narrative Guide (Person A)</a>
+<ul>
+<li><a href="#1-your-job-deliverables-and-four-days"
+id="toc-1-your-job-deliverables-and-four-days">1. Your job, deliverables
+and four days</a></li>
+<li><a href="#step-0--verify-the-submission-format-today"
+id="toc-step-0--verify-the-submission-format-today">Step 0 — Verify the
+submission format today</a></li>
+<li><a href="#step-1--the-system-in-ten-minutes"
+id="toc-step-1--the-system-in-ten-minutes">Step 1 — The system in ten
+minutes</a></li>
+<li><a href="#step-2--the-narrative-spine"
+id="toc-step-2--the-narrative-spine">Step 2 — The narrative
+spine</a></li>
+<li><a href="#step-3--slide-by-slide"
+id="toc-step-3--slide-by-slide">Step 3 — Slide by slide</a></li>
+<li><a href="#step-4--fixing-the-blueprint-deck"
+id="toc-step-4--fixing-the-blueprint-deck">Step 4 — Fixing the Blueprint
+deck</a></li>
+<li><a href="#step-5--figures-and-assets"
+id="toc-step-5--figures-and-assets">Step 5 — Figures and assets</a></li>
+<li><a href="#step-6--the-two-minute-video"
+id="toc-step-6--the-two-minute-video">Step 6 — The two-minute
+video</a></li>
+<li><a href="#step-7--the-jury-qa-sheet"
+id="toc-step-7--the-jury-qa-sheet">Step 7 — The jury Q&amp;A
+sheet</a></li>
+<li><a href="#step-8--words-to-use-and-words-to-avoid"
+id="toc-step-8--words-to-use-and-words-to-avoid">Step 8 — Words to use
+and words to avoid</a></li>
+<li><a href="#step-9--architecture-note-readme-and-the-final-checklist"
+id="toc-step-9--architecture-note-readme-and-the-final-checklist">Step 9
+— Architecture note, README and the final checklist</a></li>
+<li><a
+href="#step-10--the-repository-getting-everyone-in-reviews-and-your-own-pull-requests"
+id="toc-step-10--the-repository-getting-everyone-in-reviews-and-your-own-pull-requests">Step
+10 — The repository: getting everyone in, reviews and your own pull
+requests</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="sih26154--deck--narrative-guide-person-a">SIH26154 — Deck &amp;
+Narrative Guide (Person A)</h1>
+<p>Sep 25, 2026 · @Shahil Khan</p>
+<p>The deck is the submission, due Sep 30, 2026. Your job is to make a
+jury believe, in the few minutes they give each entry, that this team
+understands the problem better than anyone else in the room — and has
+already built the proof.</p>
+<p>The Final SRS is the source of every technical claim you make. If a
+sentence on a slide is not supported by the SRS or by something the team
+measured, it does not go on the slide.</p>
+<h2 id="1-your-job-deliverables-and-four-days">1. Your job, deliverables
+and four days</h2>
+<p>You are not the team's scribe. You own the argument: what the problem
+is, why this solution is different, and what proves it. You also hold a
+veto on scope — if something cannot be shown, it does not need building
+this week.</p>
+<table>
+<thead>
+<tr>
+<th>Deliverable</th>
+<th>For</th>
+<th>Due</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The idea-submission deck, in the official template</td>
+<td>The SIH portal</td>
+<td>Submit Tue 29; Wed 30 is buffer</td>
+</tr>
+<tr>
+<td>A demo video of at most two minutes, if links are allowed</td>
+<td>The portal</td>
+<td>Mon 28</td>
+</tr>
+<tr>
+<td>The jury Q&amp;A sheet</td>
+<td>The whole team rehearses from it</td>
+<td>Mon 28</td>
+</tr>
+<tr>
+<td>An architecture note of at most two pages, if the PS asks for
+one</td>
+<td>The finale</td>
+<td>Draft in Phase 2</td>
+</tr>
+<tr>
+<td>Everyone in the repository: invitations accepted, <code>main</code>
+protected by D, each laptop running <code>npm run check</code></td>
+<td>The whole team</td>
+<td>Fri 25, before hour zero (Step 10)</td>
+</tr>
+<tr>
+<td>The README's product sections, above the developer sections already
+there</td>
+<td>The repository</td>
+<td>Phase 2</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Work</th>
+<th>Done means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fri 25</strong></td>
+<td>Send each member their guide; check everyone is in the repository
+before hour zero (Step 10). Verify the format (Step 0). Read Steps 1 and
+2. Write every slide's text (Step 3). List the Blueprint deck's fixes
+(Step 4)</td>
+<td>Every slide has final wording, and no claim on any slide is
+unsupported</td>
+</tr>
+<tr>
+<td><strong>Sat 26</strong></td>
+<td>Build the figures (Step 5). Write the Q&amp;A sheet (Step 7). Script
+the video with C (Step 6)</td>
+<td>Figures done; Q&amp;A sheet first draft; video script agreed</td>
+</tr>
+<tr>
+<td><strong>Sun 27</strong></td>
+<td>Collect screenshots from C, the network-monitor capture from B,
+measured numbers from D. Run a Q&amp;A drill with the team</td>
+<td>Assets in; the deck is complete except for the video link</td>
+</tr>
+<tr>
+<td><strong>Mon 28</strong></td>
+<td>Record and edit the video. Final deck. Timed dry run</td>
+<td>Deck and video final; every member has answered the Q&amp;A sheet
+aloud once</td>
+</tr>
+<tr>
+<td><strong>Tue 29</strong></td>
+<td>Submit. Screenshot the confirmation</td>
+<td>Submitted a day early</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Submit on Tuesday, not Wednesday.</strong> Portals slow down
+on deadline day, and a day of buffer costs nothing. After submission you
+join B on security and integration for the finale build.</p>
+<h3 id="the-team-and-the-repository">The team and the repository</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Role</th>
+<th>Name</th>
+<th>GitHub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Deck &amp; narrative</td>
+<td>Rehan Fazal</td>
+<td><a href="https://github.com/Rehan9599">@Rehan9599</a></td>
+</tr>
+<tr>
+<td>B</td>
+<td>Backend</td>
+<td>Farhan Quamar</td>
+<td><a
+href="https://github.com/quamarfarhan007">@quamarfarhan007</a></td>
+</tr>
+<tr>
+<td>C</td>
+<td>Frontend</td>
+<td>Faizan Ahmad Ansari</td>
+<td><a href="https://github.com/Faizan0916">@Faizan0916</a></td>
+</tr>
+<tr>
+<td>D</td>
+<td>AI systems, repository owner</td>
+<td>Md Fareed Khan</td>
+<td><a href="https://github.com/MdFareedKhan01">@MdFareedKhan01</a></td>
+</tr>
+</tbody>
+</table>
+<p>The code lives at <a
+href="https://github.com/MdFareedKhan01/sih_ps154">github.com/MdFareedKhan01/sih_ps154</a>:
+<a href="https://github.com/MdFareedKhan01/sih_ps154/pulls">pull
+requests</a> · <a
+href="https://github.com/MdFareedKhan01/sih_ps154/actions">CI runs</a>.
+The repository is <strong>public</strong>: never commit
+<code>.env</code>, a key or real data. Reviews are requested
+automatically from each folder's owner
+(<code>.github/CODEOWNERS</code>).</p>
+<h2 id="step-0--verify-the-submission-format-today">Step 0 — Verify the
+submission format today</h2>
+<p>Every hour spent on slides before this check is at risk. Do it first,
+from the official sources only — not from this guide, the analysis
+document, or any other secondary write-up.</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />Download the official
+idea-submission template from the SIH portal. Use it exactly; never
+reorder or rename mandated sections.</label></li>
+<li><label><input type="checkbox" />Record the slide limit, the file
+format (PPTX or PDF) and the size limit.</label></li>
+<li><label><input type="checkbox" />Check whether a video link is
+allowed, how long it may be, and where it must be hosted.</label></li>
+<li><label><input type="checkbox" />Open the SIH26154 problem statement
+page and note any deliverables it lists itself. The analysis document
+claimed "architecture document of at most 2 pages, demo of at most 2
+minutes, presentation of at most 5 slides" — confirm or discard that
+against the page.</label></li>
+<li><label><input type="checkbox" />Note the deadline time in IST, and
+whose account submits.</label></li>
+<li><label><input type="checkbox" />Ask the institute's SIH coordinator
+whether the college has an earlier internal deadline.</label></li>
+</ul>
+<p><strong>If the template's structure differs from Step 3.</strong> In
+recent editions the idea template has run roughly: title, proposed
+solution, technical approach, feasibility and viability, impact and
+benefits, research and references. Step 3 is written for that order. If
+2026 differs, move each content block into its matching slot — the
+content stays the same; only its position changes.</p>
+<p><strong>If the portal and the PS page disagree,</strong> ask the
+coordinator before choosing. Do not guess on the one document that is
+actually graded.</p>
+<h2 id="step-1--the-system-in-ten-minutes">Step 1 — The system in ten
+minutes</h2>
+<p>You must be able to explain the system to a judge without notes. Here
+it is in plain words.</p>
+<p>An analyst has one threat report. Leadership needs a one-page
+summary, the sector CERT needs an advisory, the public needs a LinkedIn
+post. Today someone rewrites the report by hand, five or six times, and
+every rewrite can quietly change a fact. Our system does the rewriting
+in about a minute — and, which is the point, it can show where every
+sentence it wrote came from.</p>
+<pre class="mermaid">flowchart LR
+  R[Threat report] --&gt; U[&quot;Understand&lt;br/&gt;sentences + fact index&quot;]
+  U --&gt; T[&quot;Transform&lt;br/&gt;advisory, summary, post&quot;]
+  T --&gt; V[&quot;Verify&lt;br/&gt;numbers, hedges, limits&quot;]
+  V --&gt; P[&quot;Prove&lt;br/&gt;click-to-source, sealed log&quot;]
+  P --&gt; H[A human approves]</pre>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>What happens</th>
+<th>What a judge sees</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Understand</strong></td>
+<td>The report is split into numbered sentences. One model call builds
+an index of the facts — severity, actors, systems, indicators,
+recommendations — and every fact points to the sentences it came
+from</td>
+<td>The extracted-facts panel</td>
+</tr>
+<tr>
+<td><strong>Transform</strong></td>
+<td>Every format is written from that one index, never from the raw
+report, so severity, numbers and names cannot differ between
+formats</td>
+<td>Three cards filling in, each on its own</td>
+</tr>
+<tr>
+<td><strong>Verify</strong></td>
+<td>Code, not a model, checks every sentence: are its numbers in the
+source sentence it cites? If the source said <em>possible</em>, does the
+output still say so? Is it within the length limit? If anything fails,
+one targeted repair</td>
+<td><em>1 fix</em> on a card, and exactly what was fixed</td>
+</tr>
+<tr>
+<td><strong>Prove</strong></td>
+<td>Click any sentence and its source passage lights up. Every action
+goes into a log where each entry seals the one before it</td>
+<td>The yellow highlight; the tamper check</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sovereignty.</strong> Material marked <em>restricted</em> is
+processed on the laptop's own model. The server refuses to send it
+anywhere, and a network monitor beside the running system stays silent.
+Material marked <em>internal</em> goes to the cloud with IP addresses,
+domains and names masked.</p>
+<p><strong>The four beats.</strong> Every slide and every answer ties
+back to one of these (SRS §12).</p>
+<table>
+<thead>
+<tr>
+<th>Beat</th>
+<th>The question it answers</th>
+<th>The proof</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Provenance</td>
+<td><em>Is it making things up?</em></td>
+<td>Click a sentence; its source lights up</td>
+</tr>
+<tr>
+<td>Consistency</td>
+<td><em>Isn't this just five separate prompts?</em></td>
+<td>One fact index feeds every format</td>
+</tr>
+<tr>
+<td>Sovereignty</td>
+<td><em>Where does our data go?</em></td>
+<td>A silent network monitor during a restricted run</td>
+</tr>
+<tr>
+<td>Verification</td>
+<td><em>What if it gets a number wrong?</em></td>
+<td>The injected error, caught and repaired on screen</td>
+</tr>
+</tbody>
+</table>
+<h2 id="step-2--the-narrative-spine">Step 2 — The narrative spine</h2>
+<p><strong>The one sentence.</strong> Put it on the solution slide and
+say it at the end of the video, word for word:</p>
+<blockquote>
+<p>Our platform converts trusted source intelligence into controlled,
+audience-specific artefacts while preserving factual integrity and a
+verifiable transformation trail.</p>
+</blockquote>
+<p><strong>The short form</strong>, for the title slide: <em>One trusted
+source. Many verified artefacts. Every sentence traceable.</em></p>
+<p><strong>The story, in six moves.</strong></p>
+<pre class="mermaid">flowchart LR
+  A[&quot;1 The pain&lt;br/&gt;one report, rewritten 5-6 times&quot;] --&gt; B[&quot;2 The danger&lt;br/&gt;every rewrite drifts&quot;]
+  B --&gt; C[&quot;3 The gap&lt;br/&gt;tools generate; none trace&quot;]
+  C --&gt; D[&quot;4 Our answer&lt;br/&gt;Understand, Transform,&lt;br/&gt;Verify, Prove&quot;]
+  D --&gt; E[&quot;5 The proof&lt;br/&gt;it runs today&quot;]
+  E --&gt; F[&quot;6 The impact&lt;br/&gt;minutes, with a trail&quot;]</pre>
+<p><strong>The two examples are the heart of the deck.</strong>
+Architecture explains what was built; these explain why it had to exist.
+A judge feels them in four seconds. Use them verbatim.</p>
+<blockquote>
+<p>Source: <em>"The organisation observed indicators consistent with a
+possible phishing campaign."</em></p>
+<p>Rewrite: <em>"The organisation was attacked by a phishing
+campaign."</em></p>
+</blockquote>
+<p>Fluent, more confident — and the evidence has silently changed. No
+spell-check, style guide or quick human read catches it. Our hedge check
+does.</p>
+<blockquote>
+<p>Source: <em>"37 organisations were potentially exposed."</em></p>
+<p>Rewrite: <em>"42 organisations were exposed."</em></p>
+</blockquote>
+<p>It cites the right sentence and still gets the number wrong, and
+drops the hedge too. A grounding score alone would call it perfect. Our
+verifier catches both errors and repairs only that sentence.</p>
+<p><strong>The "it's just an LLM wrapper" answer</strong>, which the
+whole deck exists to support: the model is one component. The
+engineering is the pipeline around it — a single fact index,
+deterministic verification, one capped repair, classification-enforced
+routing, and a sealed log. Swap the model and every one of those still
+holds.</p>
+<p><strong>What judges score, and where the deck answers
+it.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Their question</th>
+<th>Where it is answered</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Innovation</td>
+<td>Is this more than an LLM wrapper?</td>
+<td>Solution slide: the four words and the two examples</td>
+</tr>
+<tr>
+<td>Feasibility</td>
+<td>Does the workflow actually run?</td>
+<td>Feasibility slide: screenshots and measured numbers</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>How are sensitive inputs protected?</td>
+<td>Technical slide: the sovereignty boundary</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>Why does NTRO need this?</td>
+<td>Solution and impact slides</td>
+</tr>
+<tr>
+<td>Completeness</td>
+<td>A product, or a prompt demo?</td>
+<td>The video, and the build plan</td>
+</tr>
+</tbody>
+</table>
+<h2 id="step-3--slide-by-slide">Step 3 — Slide by slide</h2>
+<p>Six slides, in the order recent templates use. Wording in quotation
+marks goes on the slide as written. Figure codes such as F1 refer to
+Step 5. Numbers in square brackets are placeholders for D's measurements
+— if a number was not measured, delete the sentence rather than estimate
+it.</p>
+<h3 id="slide-1--title">Slide 1 — Title</h3>
+<ul>
+<li><p>The template's fields: PS ID <strong>SIH26154</strong>, <em>Gen
+AI Platform for Automated Content Transformation</em>, organisation
+<strong>NTRO</strong>, theme <strong>Blockchain &amp;
+Cybersecurity</strong>, team name, team ID, institute.</p></li>
+<li><p>Product name: <strong>Intelligent Content Transformation
+Engine</strong>, the team's own name from the Blueprint deck.</p></li>
+<li><p>Tagline: "One trusted source. Many verified artefacts. Every
+sentence traceable."</p></li>
+<li><p>Visual: the Blueprint cover art. It is good; keep it.</p></li>
+</ul>
+<h3 id="slide-2--proposed-solution">Slide 2 — Proposed solution</h3>
+<p><strong>Headline:</strong> "We don't just generate content. We
+transform intelligence without losing its integrity."</p>
+<p><strong>Left, the problem:</strong></p>
+<ul>
+<li><p>"One report is rewritten by hand five or six times — for
+leadership, sector CERTs and the public."</p></li>
+<li><p>"Every rewrite can drift: <em>consistent with a possible phishing
+campaign</em> becomes <em>was attacked by a phishing
+campaign</em>."</p></li>
+<li><p>"Today's AI tools write fluent text. None can show where a
+sentence came from."</p></li>
+</ul>
+<p><strong>Right, the solution:</strong> F1, the four-word pipeline, one
+line under each word.</p>
+<p><strong>Box, what is new:</strong></p>
+<ul>
+<li><p>"Every sentence is clickable back to the passage it came
+from."</p></li>
+<li><p>"The system checks its own output in code, and repairs the
+specific error."</p></li>
+<li><p>"Restricted material never leaves the machine — enforced by the
+server, not a setting."</p></li>
+</ul>
+<p><em>Speaker notes:</em> "An analyst writes one report; five audiences
+need it in five shapes. Rewriting by hand is slow, and each rewrite can
+quietly change what the evidence says — <em>possible</em> becomes
+<em>confirmed</em>. Our system does the rewriting, and unlike any AI
+writing tool, it can show you the source of every sentence it
+wrote."</p>
+<h3 id="slide-3--technical-approach">Slide 3 — Technical approach</h3>
+<p><strong>Headline:</strong> "An orchestrated pipeline around the model
+— not a prompt."</p>
+<p><strong>Visual:</strong> F2, the corrected architecture, with C's
+provenance screenshot as an inset.</p>
+<p><strong>Body:</strong></p>
+<ul>
+<li><p>"One fact index per source; every format is written from it — so
+severity, numbers and names match across all artefacts."</p></li>
+<li><p>"A deterministic verifier checks every sentence's numbers,
+identifiers and hedges against the sentence it cites. One targeted
+repair; never a loop."</p></li>
+<li><p>"Classification-tiered routing: public to the cloud, internal to
+the cloud with identifiers masked, restricted to the on-device model
+only — enforced server-side before any provider is chosen."</p></li>
+<li><p>"A sealed audit log: each entry carries the hash of the one
+before it, so a changed record is detected."</p></li>
+</ul>
+<p><strong>Footer:</strong> "TypeScript end to end — React, Express,
+BullMQ, PostgreSQL, Redis · Gemini in the cloud · Ollama on the
+device."</p>
+<p><em>Speaker notes:</em> "The model is one component. Around it is a
+pipeline: understand the source once, write every format from the same
+facts, check every sentence in code, and prove it. Routing decisions are
+made by code, not by a model, because in intelligence work the document
+itself can be hostile."</p>
+<h3 id="slide-4--feasibility-and-viability">Slide 4 — Feasibility and
+viability</h3>
+<p><strong>Headline:</strong> "It runs today: three formats generated,
+verified and traced from one source."</p>
+<p><strong>Measured</strong> (D's numbers only): "[n] seconds for three
+formats on the cloud model. [n] seconds on the laptop's own model.
+Average grounding [x] across [n] runs."</p>
+<p><strong>Screenshots:</strong> C's #3 (live cards), #5 (the repair)
+and #6 (restricted run beside a silent network monitor).</p>
+<p><strong>Risks and mitigations:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>How it is handled</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The model states something false</td>
+<td>Every number and hedge is checked against the cited sentence; a
+human approves before release</td>
+</tr>
+<tr>
+<td>The network or provider fails on the day</td>
+<td>The on-device model takes over, then a cached pack; the demo runs on
+a laptop hotspot</td>
+</tr>
+<tr>
+<td>A document tries to instruct the model</td>
+<td>Source text is treated as data; control flow is code; injected text
+surfaces as unverified</td>
+</tr>
+<tr>
+<td>Scope grows faster than the build</td>
+<td>Five formats in the MVP; two stretch formats locked behind
+acceptance tests</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Next:</strong> "X thread and video package, Hindi output, the
+review workflow, containerised deployment."</p>
+<p><em>Speaker notes:</em> "This is not a mock-up. These screens are the
+running prototype. The error on screen was injected deliberately to show
+the verifier — and it caught it."</p>
+<h3 id="slide-5--impact-and-benefits">Slide 5 — Impact and benefits</h3>
+<p><strong>Headline:</strong> "From a working day to minutes — with a
+trail an auditor can check."</p>
+<table>
+<thead>
+<tr>
+<th>For NTRO and NCIIPC</th>
+<th>For security</th>
+<th>For growth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analyst hours returned; faster dissemination to sector CISOs; one
+consistent message on every channel</td>
+<td>Sensitive content stays on-premise by policy; every artefact traces
+to its source; tampering with the log is detected</td>
+<td>A new format is one registry entry; Hindi is a setting, not a new
+pipeline</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Footer:</strong> "Target: five artefacts from a 3,000-word
+source in under 60 seconds." Keep the word <em>target</em> unless D
+measured it.</p>
+<h3 id="slide-6--research-and-references">Slide 6 — Research and
+references</h3>
+<ul>
+<li><p>Problem statement SIH26154, National Technical Research
+Organisation.</p></li>
+<li><p>NIST AI 600-1, <em>Generative AI Profile</em> of the AI Risk
+Management Framework — the risk framing.</p></li>
+<li><p>OWASP Top 10 for LLM Applications — prompt injection, the first
+risk on its list.</p></li>
+<li><p>C2PA specification — content provenance, the roadmap anchor for
+the audit log.</p></li>
+<li><p>Adjacent products: Adobe GenStudio, Canva Magic Write, ChatGPT.
+They generate; none traces a sentence to its source.</p></li>
+<li><p>Tools: Gemini API, Ollama, BullMQ, PostgreSQL, Redis.</p></li>
+</ul>
+<p>Open each reference yourself before citing it, and use the title
+exactly as the source gives it.</p>
+<p><strong>If the cap is five slides,</strong> fold the references into
+a footer line on slide 5. If the template allows, carry the title fields
+as a header strip on slide 2 and give the freed slide to the
+screenshots.</p>
+<h2 id="step-4--fixing-the-blueprint-deck">Step 4 — Fixing the Blueprint
+deck</h2>
+<p>The <em>Resilient Intelligence Blueprint</em> deck looks like an
+engineering document rather than a pitch, and that will land. It is not
+in the official template, so it is not the submission. Its visuals are,
+though: the architecture tiers, the sovereignty boundary and the
+fallback matrix go into slides 2 and 3 once the errors below are fixed.
+Each error is one a security-literate judge will find.</p>
+<table>
+<thead>
+<tr>
+<th>Slide</th>
+<th>It says</th>
+<th>Why that is a problem</th>
+<th>Replace with</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>"Restricted data <strong>physically</strong> cannot cross the cloud
+egress arrow"</td>
+<td>The same box says <em>evaluated server-side</em>. It is a software
+check; <em>physically</em> invites "physically how?"</td>
+<td>"Enforced server-side in the worker, before any provider is chosen.
+A restricted task that reaches the cloud adapter is refused."</td>
+</tr>
+<tr>
+<td>5</td>
+<td>QUALITY (schema invalid twice) arrows into LOCAL MODEL</td>
+<td>A quality failure is terminal and never reroutes (SRS §9.1);
+rerouting would hide a bug behind a fallback</td>
+<td>Draw QUALITY to its own box, <em>Task failed, retry offered</em>,
+labelled <em>never rerouted</em></td>
+</tr>
+<tr>
+<td>2</td>
+<td>IMAGE CONTEXT among the inputs</td>
+<td>Image ingestion is out of scope (SRS §1); a judge can ask to see
+it</td>
+<td>Remove the icon. Four inputs remain</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"100% JSON-enforced"</td>
+<td>An overclaim: invalid output gets one repair, then the card
+fails</td>
+<td>"Schema-validated, with one targeted repair"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Tailscale WireGuard inside the sovereignty matrix</td>
+<td>Tailscale controls who reaches the gateway, not what leaves the
+server</td>
+<td>Move it to slide 3, beside the gateway: "Device access: Tailscale
+(ingress only)"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>FastAPI in tier 2; Celery in tier 3</td>
+<td>The stack is TypeScript (SRS §7)</td>
+<td>Express in tier 2; BullMQ in tier 3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Tier 5: Workers, MCP Server, AI Engine</td>
+<td>The MCP server is a Phase 2 item. Claim it only once it exists</td>
+<td>"Workers, verifier, AI engine"</td>
+</tr>
+<tr>
+<td>5</td>
+<td>"System collapses into FastAPI background tasks. The system will not
+fail to start."</td>
+<td>An internal contingency, and it reads as defensive</td>
+<td>Delete it. Keep the venue-strategy sentence above it, which is
+excellent</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What the Blueprint deck lacks entirely:</strong> any view of
+the product, the two examples, the provenance interaction and the
+verification catch. Those come from Steps 2 and 5.</p>
+<h2 id="step-5--figures-and-assets">Step 5 — Figures and assets</h2>
+<p>Six figures carry the deck. Draw F1 to F5 in one tool — draw.io or
+Excalidraw — in the Blueprint style: navy on grid paper, one orange
+accent, text no smaller than 18 point. F6 is a screenshot with one
+annotation.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Figure</th>
+<th>Slide</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F1</td>
+<td>The four-word pipeline</td>
+<td>2</td>
+<td>Sketch below</td>
+</tr>
+<tr>
+<td>F2</td>
+<td>Architecture tiers, corrected</td>
+<td>3</td>
+<td>Blueprint slide 3 plus Step 4's fixes</td>
+</tr>
+<tr>
+<td>F3</td>
+<td>Sovereignty boundary, corrected wording</td>
+<td>3</td>
+<td>Blueprint slide 4 plus Step 4's fixes</td>
+</tr>
+<tr>
+<td>F4</td>
+<td>Fallback matrix, corrected</td>
+<td>4, or Q&amp;A backup</td>
+<td>Diagram below</td>
+</tr>
+<tr>
+<td>F5</td>
+<td>The two examples, before and after</td>
+<td>2</td>
+<td>Step 2</td>
+</tr>
+<tr>
+<td>F6</td>
+<td>The provenance screenshot, arrow from sentence to source</td>
+<td>3</td>
+<td>C's screenshot #4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>F1, the four-word pipeline.</strong></p>
+<pre class="text"><code>[ Threat report ] --&gt; UNDERSTAND --&gt; TRANSFORM --&gt; VERIFY --&gt; PROVE --&gt; [ Approved ]
+                      sentences +    each format   numbers,    click to
+                      fact index     written from  hedges,     source;
+                                     one index     limits      sealed log</code></pre>
+<p><strong>F4, the fallback matrix as it must be redrawn.</strong> Three
+conditions reroute; the fourth stops.</p>
+<pre class="mermaid">flowchart LR
+  P[&quot;Policy&lt;br/&gt;restricted&quot;] --&gt; L[On-device model]
+  C[&quot;Capacity&lt;br/&gt;rate limit&quot;] --&gt; L
+  F[&quot;Failure&lt;br/&gt;network&quot;] --&gt; L
+  L --&gt;|unreachable| K[Cached pack]
+  Q[&quot;Quality&lt;br/&gt;invalid after repair&quot;] --&gt; X[&quot;Task failed&lt;br/&gt;retry offered&quot;]</pre>
+<p><strong>F5, the two examples.</strong> Two before-and-after cards
+side by side. On the first, show <em>consistent with a possible</em>
+struck out and <em>was attacked by</em> in red. On the second, show
+<em>37</em> turning into <em>42</em> and <em>potentially</em>
+disappearing. Caption: <em>"Fluent. Confident. Wrong. Our verifier
+catches both."</em></p>
+<p><strong>The asset schedule.</strong> Chase these by name; a missing
+screenshot on Sunday night is a slide you cannot finish.</p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>From</th>
+<th>Due</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Team name, team ID, institute details</td>
+<td>The team lead</td>
+<td>Fri 25</td>
+</tr>
+<tr>
+<td>Six screenshots (Frontend Guide, Step 8)</td>
+<td>C</td>
+<td>Sun 27, evening</td>
+</tr>
+<tr>
+<td>Network-monitor capture during a restricted run</td>
+<td>B</td>
+<td>Sun 27, evening</td>
+</tr>
+<tr>
+<td>The audit-tamper command and its result</td>
+<td>B</td>
+<td>Sun 27</td>
+</tr>
+<tr>
+<td>Measured numbers table, and the exact model names</td>
+<td>D</td>
+<td>Sun 27, evening</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Where assets live.</strong> Keep the deck's sources in the
+repository, so nothing exists only on one laptop the night before
+submission:</p>
+<pre class="text"><code>docs/deck/
+  figures/        F1–F5 sources (.drawio or .excalidraw) and their PNG exports
+  screenshots/    C&#39;s six screenshots, B&#39;s network-monitor capture
+  numbers.md      D&#39;s measured numbers table and the exact model names, as sent
+  SIH26154-deck.pptx   the final deck only, not every draft</code></pre>
+<p>Screenshots arrive in teammates' pull requests, since every PR that
+changes a screen carries one, or in the team chat; copy the ones you use
+into <code>docs/deck/screenshots/</code>. Keep the video out of git:
+host it where the portal says, and put its link in
+<code>numbers.md</code>.</p>
+<h2 id="step-6--the-two-minute-video">Step 6 — The two-minute video</h2>
+<p>One story, not fifteen features. Every shot proves one of the four
+beats. The voiceover is about 260 words, which fits two minutes at a
+calm pace with room for the visuals to breathe.</p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>On screen</th>
+<th>Voiceover</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:00–0:10</td>
+<td>Title card with the tagline</td>
+<td>"An analyst writes one threat report. Five audiences need it.
+Rewriting it by hand takes a day — and every rewrite can quietly change
+the facts."</td>
+</tr>
+<tr>
+<td>0:10–0:25</td>
+<td>Ingest: the demo report pasted, <em>Internal</em> selected, its
+consequence readable</td>
+<td>"We paste a report and mark it Internal, so identifiers are masked
+before anything reaches the cloud."</td>
+</tr>
+<tr>
+<td>0:25–0:40</td>
+<td>Confirm: the extracted-facts panel beside the source</td>
+<td>"First, the system builds one index of the facts — severity high,
+actor TC-7, 37 organisations — and every fact points back to its
+sentence."</td>
+</tr>
+<tr>
+<td>0:40–0:50</td>
+<td>Configure: senior officials, formal; three formats; LinkedIn tone
+set to conversational; Generate</td>
+<td>"One source, three formats. The LinkedIn post gets its own
+tone."</td>
+</tr>
+<tr>
+<td>0:50–1:05</td>
+<td>Workspace: cards filling independently; one shows
+<em>Repairing</em></td>
+<td>"Each format is written from the same index, and checked before
+anyone sees it."</td>
+</tr>
+<tr>
+<td>1:05–1:20</td>
+<td>A LinkedIn sentence clicked; its source passage lights up</td>
+<td>"Every sentence is traceable. Click it, and its source lights
+up."</td>
+</tr>
+<tr>
+<td>1:20–1:35</td>
+<td>The verification badge expanded</td>
+<td>"Here we injected a fault: the draft said 42 organisations. The
+verifier checked the sentence it cited — which says 37 — caught it, and
+repaired only that sentence."</td>
+</tr>
+<tr>
+<td>1:35–1:52</td>
+<td>A restricted run beside the network monitor, sped up and labelled
+<em>×4</em></td>
+<td>"Restricted material runs on this laptop's own model. The server
+refuses to send it out, and the network monitor stays silent."</td>
+</tr>
+<tr>
+<td>1:52–2:00</td>
+<td>Closing card: Understand, Transform, Verify, Prove</td>
+<td>"We don't just generate content. We transform intelligence without
+losing its integrity."</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recording.</strong></p>
+<ol type="1">
+<li><p>Record each row as its own clip, at 1920×1080, with OBS Studio or
+the Windows Game Bar (Win+Alt+R). Projector mode on (Frontend Guide,
+Step 8).</p></li>
+<li><p>Rehearse each clip first. Use the demo source only — the cached
+pack and D's tests are built around it.</p></li>
+<li><p>Record the voiceover separately, in a quiet room. Edit clips and
+voice together in Clipchamp, which ships with Windows 11.</p></li>
+<li><p>Label any sped-up footage on screen. Hidden speed-ups are the
+kind of claim a judge remembers against you.</p></li>
+<li><p><strong>Say "injected" out loud in the 1:20 shot.</strong>
+Passing an injected fault off as a natural error would make the video
+exactly what the product exists to catch (SRS §9.5).</p></li>
+<li><p>Upload unlisted wherever the portal allows, then open the link
+from a signed-out browser to check that it plays.</p></li>
+</ol>
+<h2 id="step-7--the-jury-qa-sheet">Step 7 — The jury Q&amp;A sheet</h2>
+<p>Every answer is short, specific and true. Each question has one owner
+who answers first; anyone may add one sentence after. On Sunday, the
+team lead reads questions at random and the owner answers aloud in under
+30 seconds. Numbers in square brackets come from D's measurements.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>Answer</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><em>Isn't this just an LLM wrapper?</em></td>
+<td>The model is one component. Around it: one fact index per source,
+every format written from it, a verifier in code that checks every
+number and hedge against the sentence it cites, one targeted repair,
+classification-enforced routing and a sealed log. Swap the model and all
+of that still holds.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>2</td>
+<td><em>How do you prevent hallucinations? Can you guarantee
+none?</em></td>
+<td>No generative system should promise zero. We reduce and detect:
+formats are written only from extracted facts, every sentence carries
+its source, code checks numbers and hedges, unsupported sentences are
+marked unverified, and a human approves before release.</td>
+<td>D</td>
+</tr>
+<tr>
+<td>3</td>
+<td><em>What happens to confidential government information?</em></td>
+<td>Three tiers. Restricted never leaves the machine: a local model,
+enforced on the server before any provider is chosen. Internal goes to
+the cloud with IPs, domains and names masked. Public goes directly.</td>
+<td>B</td>
+</tr>
+<tr>
+<td>4</td>
+<td><em>Why blockchain? Why not just a database?</em></td>
+<td>We did not bolt on a chain. The audit log is hash-linked, so
+changing any past entry is detected, and we can show it. A permissioned
+ledger or C2PA manifest is the path when an outside party must verify
+without trusting our database.</td>
+<td>B</td>
+</tr>
+<tr>
+<td>4a</td>
+<td><em>Can't someone just delete the newest rows?</em></td>
+<td>Yes. Detecting that needs the latest hash published somewhere
+outside the operator's control — that is our roadmap step.</td>
+<td>B</td>
+</tr>
+<tr>
+<td>5</td>
+<td><em>Is it agentic?</em></td>
+<td>It plans a batch, fans it out, checks its own output and repairs
+specific failures — an agentic loop. The control decisions are
+deliberately code: in intelligence work the document can be hostile, and
+a model that picks the next step can be steered by what it reads.</td>
+<td>D</td>
+</tr>
+<tr>
+<td>6</td>
+<td><em>What if the model changes a number?</em></td>
+<td>Show it: the draft cited the right sentence but said 42 where the
+source says 37. The verifier compares against the cited sentence, flags
+it, and repairs only that sentence. Never more than two model calls per
+artefact.</td>
+<td>D</td>
+</tr>
+<tr>
+<td>7</td>
+<td><em>What about prompt injection hidden in a document?</em></td>
+<td>The source is delimited data, never the system prompt; output must
+fit a schema; the orchestrator is code, so a document cannot redirect
+it. Injected text that reaches the output has no valid citation and
+shows as unverified. We test it with a planted instruction.</td>
+<td>D</td>
+</tr>
+<tr>
+<td>8</td>
+<td><em>Why not ChatGPT, Adobe GenStudio or Canva?</em></td>
+<td>They prove the market for AI writing. We focus on trusted
+transformation in a security workflow: one set of facts across formats,
+sentence-level provenance, classification-aware routing and an audit
+trail. Those are first-class here and absent there.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>9</td>
+<td><em>What if the internet fails?</em></td>
+<td>The on-device model takes over. If that is down too, a cached pack
+for the known source is served, and labelled as such. We present from a
+laptop hotspot, not venue wifi.</td>
+<td>B</td>
+</tr>
+<tr>
+<td>10</td>
+<td><em>How good is the local model?</em></td>
+<td>Weaker and slower than the cloud model: [n] seconds per format on
+our laptop. Its output passes through the same verifier, so its mistakes
+are caught the same way.</td>
+<td>D</td>
+</tr>
+<tr>
+<td>11</td>
+<td><em>How does this scale?</em></td>
+<td>A new format is one registry entry. Language is a parameter: the
+same facts in Hindi, identifiers kept in English. Throughput grows by
+adding workers to the queue.</td>
+<td>D</td>
+</tr>
+<tr>
+<td>12</td>
+<td><em>What did you actually build?</em></td>
+<td>Built: [exactly what runs on submission day]. Planned for the
+finale: [the Phase 2 list]. Never blur the two.</td>
+<td>A</td>
+</tr>
+<tr>
+<td>13</td>
+<td><em>Why TypeScript for an AI project?</em></td>
+<td>The model is an API call. The hard parts are orchestration,
+verification and streaming, where one language and shared types across
+frontend and backend remove a class of bugs. Nothing here trains a
+model.</td>
+<td>B</td>
+</tr>
+<tr>
+<td>14</td>
+<td><em>How do you measure quality?</em></td>
+<td>Grounding score per artefact, the share of drafts that needed a
+repair, and findings left after repair, measured on our test set:
+[numbers].</td>
+<td>D</td>
+</tr>
+<tr>
+<td>15</td>
+<td><em>Is this real NTRO data?</em></td>
+<td>No. It is a clearly labelled synthetic incident report, built to
+exercise every check. We would never present synthetic data as
+operational.</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="step-8--words-to-use-and-words-to-avoid">Step 8 — Words to use
+and words to avoid</h2>
+<p>A security jury listens for overclaims. One wrong word on a slide
+costs more credibility than a missing feature. Search the final deck for
+every word in the left column before submitting.</p>
+<table>
+<thead>
+<tr>
+<th>Avoid</th>
+<th>Why</th>
+<th>Say instead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Physically cannot"</td>
+<td>It is a software check</td>
+<td>"Enforced server-side before any provider is chosen"</td>
+</tr>
+<tr>
+<td>"100%", "guaranteed", "zero hallucination"</td>
+<td>Unprovable, and it invites a counter-example</td>
+<td>"Checked against the source, one targeted repair, human
+approval"</td>
+</tr>
+<tr>
+<td>"Blockchain-powered", "on the blockchain"</td>
+<td>No chain runs in this system</td>
+<td>"Hash-linked audit log; ledger anchoring on the roadmap"</td>
+</tr>
+<tr>
+<td>"Military-grade", "unhackable"</td>
+<td>Meaningless, and provocative to this audience</td>
+<td>Name the control: "classification-enforced routing"</td>
+</tr>
+<tr>
+<td>"Our AI understands"</td>
+<td>Invites "how?"</td>
+<td>"The model extracts the facts; code verifies them"</td>
+</tr>
+<tr>
+<td>"Fully autonomous agents"</td>
+<td>Untrue, and a security red flag here</td>
+<td>"An orchestrated pipeline; control flow in code"</td>
+</tr>
+<tr>
+<td>"Real-time"</td>
+<td>Not measured</td>
+<td>"About [n] seconds for three formats"</td>
+</tr>
+<tr>
+<td>"NTRO data", "real intelligence"</td>
+<td>The sample is synthetic</td>
+<td>"A synthetic incident report"</td>
+</tr>
+<tr>
+<td>"Supports images and video input"</td>
+<td>Out of scope</td>
+<td>"Text, PDF and DOCX sources"</td>
+</tr>
+<tr>
+<td>"Zero-latency"</td>
+<td>Corrected in the SRS</td>
+<td>"Minutes instead of a working day"</td>
+</tr>
+<tr>
+<td>"MCP-based", until the server exists</td>
+<td>A Phase 2 item</td>
+<td>Leave it out; if asked, "the tools are shaped for MCP"</td>
+</tr>
+<tr>
+<td>"Our model"</td>
+<td>The team uses hosted and open models</td>
+<td>Name them: the exact model names D reports</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Words that earn trust:</strong> <em>traceable, verified
+against the source, enforced server-side, tamper-evident, targeted
+repair, on-device, synthetic sample, measured, target.</em></p>
+<h2 id="step-9--architecture-note-readme-and-the-final-checklist">Step 9
+— Architecture note, README and the final checklist</h2>
+<h3
+id="the-architecture-note--at-most-two-pages-only-if-the-ps-asks-for-it">The
+architecture note — at most two pages, only if the PS asks for it</h3>
+<p>Draft it in Phase 2 from the SRS; every section below maps to one SRS
+section, so nothing new needs inventing.</p>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Content</th>
+<th>From</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Problem and approach</td>
+<td>Three sentences, ending with the one-sentence pitch</td>
+<td>SRS §1</td>
+</tr>
+<tr>
+<td>Architecture</td>
+<td>Figure F2, with one sentence per tier</td>
+<td>SRS §7</td>
+</tr>
+<tr>
+<td>The pipeline</td>
+<td>The four-word table from Step 1</td>
+<td>SRS §5, §9</td>
+</tr>
+<tr>
+<td>Security model</td>
+<td>The three tiers, the egress gate, injection controls, the sealed
+log</td>
+<td>SRS §5.6, §5.7, §8</td>
+</tr>
+<tr>
+<td>Resilience</td>
+<td>Figure F4, the cached pack, the hotspot</td>
+<td>SRS §9.1, §13</td>
+</tr>
+<tr>
+<td>Limits and roadmap</td>
+<td>Tail deletion needs an external anchor; no OCR; date normalisation
+next</td>
+<td>SRS §1, §8, §9.5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-readme--phase-2-at-the-repo-root">The README — Phase 2, at
+the repo root</h3>
+<p>A developer README already exists at the repo root: layout, quick
+start, commands, the pull-request workflow, CI, troubleshooting, the
+data note and the owners table. Keep all of it. In Phase 2, add the
+product sections <strong>above</strong> it, so a judge who opens the
+repository reads the product first and the setup second:</p>
+<ol type="1">
+<li><p>One line on what it is, the tagline, and screenshot #4, from
+<code>docs/deck/screenshots/</code>.</p></li>
+<li><p>The demo, as four numbered beats with the exact clicks.</p></li>
+<li><p>The architecture figure F2, and a link to the Final SRS.</p></li>
+<li><p>Measured numbers from <code>docs/deck/numbers.md</code>, each
+labelled <em>measured</em> or <em>target</em>.</p></li>
+</ol>
+<p>The quick start, the team table and the data note are already there;
+check they are still true, rather than writing them again.</p>
+<h3 id="before-you-press-submit">Before you press Submit</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" />The official template is used, with
+its mandated sections in their order</label></li>
+<li><label><input type="checkbox" />Slide 1 has the correct PS ID,
+title, theme, team name and team ID</label></li>
+<li><label><input type="checkbox" />Every number on a slide is in D's
+table, or is labelled <em>target</em></label></li>
+<li><label><input type="checkbox" />The words-to-avoid search from Step
+8 finds nothing</label></li>
+<li><label><input type="checkbox" />Every reused Blueprint visual
+carries the Step 4 fixes</label></li>
+<li><label><input type="checkbox" />Both examples are on the solution
+slide</label></li>
+<li><label><input type="checkbox" />The provenance screenshot is in the
+deck</label></li>
+<li><label><input type="checkbox" />Screenshot #5 is captioned <em>fault
+injected for demonstration</em>, and the video says <em>injected</em>
+aloud</label></li>
+<li><label><input type="checkbox" />The video is under two minutes and
+plays from a signed-out browser</label></li>
+<li><label><input type="checkbox" />The file is under the portal's size
+limit; for a PDF, fonts are embedded</label></li>
+<li><label><input type="checkbox" />Two teammates have proof-read the
+deck</label></li>
+<li><label><input type="checkbox" />Submitted on Tuesday, with a
+screenshot of the confirmation saved</label></li>
+</ul>
+<h2
+id="step-10--the-repository-getting-everyone-in-reviews-and-your-own-pull-requests">Step
+10 — The repository: getting everyone in, reviews and your own pull
+requests</h2>
+<p>The team works in one Turborepo monorepo at <a
+href="https://github.com/MdFareedKhan01/sih_ps154">github.com/MdFareedKhan01/sih_ps154</a>.
+The README at its root is the manual: layout, commands and the
+pull-request workflow. You have three jobs in it: make sure all four of
+you can work in it on Friday, review what the deck will quote, and put
+your own work through the same pull requests as everyone else.</p>
+<h3 id="before-hour-zero-on-friday">Before hour zero on Friday</h3>
+<p>The scaffold is on <code>main</code>, and CI passed on it. D owns the
+repository, so the settings are D's (Guide D, Step 0, and the README's
+<em>Repository settings</em>); your part is checking that they
+happened:</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />Send each member their own guide and
+the repository link</label></li>
+<li><label><input type="checkbox" />B, C and D have accepted their
+invitations and can each run
+<code>git clone https://github.com/MdFareedKhan01/sih_ps154.git</code>,
+<code>npm install</code> and <code>npm run check</code> on their own
+laptop</label></li>
+<li><label><input type="checkbox" />D has added the ruleset protecting
+<code>main</code>. Until then, remind everyone: no direct pushes to
+<code>main</code></label></li>
+<li><label><input type="checkbox" />Your first pull request, this guide
+update included, has merged, so everyone clones the guides with the
+team's names in them</label></li>
+</ul>
+<h3 id="reviews-that-are-yours">Reviews that are yours</h3>
+<p>You are not a code reviewer, but some pull requests change words the
+deck and the video quote. Ask to be added as a reviewer on these, and
+check them against Step 8's words to avoid:</p>
+<table>
+<thead>
+<tr>
+<th>PR changes</th>
+<th>Why you check it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C's classification wording, badges, card labels</td>
+<td>They are read aloud in the demo and appear in screenshots</td>
+</tr>
+<tr>
+<td>D's finding <code>detail</code> text</td>
+<td>Screenshot #5 shows it on a slide</td>
+</tr>
+<tr>
+<td>Anything in <code>docs/final/</code></td>
+<td>The SRS and the guides are the team's contract</td>
+</tr>
+<tr>
+<td>The README</td>
+<td>The first page a judge sees</td>
+</tr>
+</tbody>
+</table>
+<h3 id="your-own-pull-requests">Your own pull requests</h3>
+<p>Nobody pushes to <code>main</code>, you included. Your work goes in
+<code>docs/</code>:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch main</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">-c</span> docs/deck-figures           <span class="co"># docs/&lt;what&gt;: docs/qa-sheet, docs/readme, docs/guide-fix</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ...add files under docs/deck/, or edit a guide...</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run docs:html                          <span class="co"># only after editing a guide or the SRS: rebuilds its .html copy</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add docs</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;docs: figures F1 to F5, sources and exports&quot;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin docs/deck-figures</span></code></pre></div>
+<p>Then open <a href="https://github.com/MdFareedKhan01/sih_ps154">the
+repository</a>, press <em>Compare &amp; pull request</em> (or use <a
+href="https://github.com/MdFareedKhan01/sih_ps154/compare">New pull
+request</a>) and fill in the template. The code checks do not apply to
+you, so say what you checked instead: the HTML opens and its diagrams
+render, the links work, every number is in D's table. CI still runs
+<code>npm run check</code> and must pass; a docs-only change cannot
+break it.</p>
+<p><strong>Editing the SRS or a guide.</strong> It is the contract
+everyone builds from, so post in the team chat before the pull request,
+and ask the owner of the affected guide to review.
+<code>npm run docs:html</code> needs <a
+href="https://pandoc.org">pandoc</a>; commit the <code>.md</code> and
+the rebuilt <code>.html</code> together, so they never disagree.</p>
+<p><strong>Binary files.</strong> Commit the final deck and final figure
+exports, not every draft: git keeps every version of a binary forever.
+Never commit the video, a real report, or anything from the portal that
+carries personal data.</p>
+</body>
+</html>

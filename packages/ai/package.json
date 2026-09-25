@@ -5,5 +5,17 @@
   "main": "src/index.ts",
   "dependencies": {
     "@ps154/shared": "*"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@google/genai": "^2.24.0",
+    "@ps154/shared": "*",
+    "dotenv": "^18.0.3",
+    "ioredis": "^6.0.0",
+    "zod": "^4.6.5"
   }
 }

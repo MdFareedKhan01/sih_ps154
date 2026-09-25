@@ -1,0 +1,29 @@
+
+<style>
+  :root { --ink:#0f172a; --muted:#475569; --line:#cbd5e1; --soft:#f1f5f9; --accent:#0b3d91; }
+  html { font-size: 16px; }
+  body { max-width: 980px; margin: 0 auto; padding: 32px 20px 80px; color: var(--ink);
+         font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; line-height: 1.6; background: #fff; }
+  h1 { font-size: 2rem; line-height: 1.25; border-bottom: 3px solid var(--accent); padding-bottom: .4rem; }
+  h2 { font-size: 1.5rem; margin-top: 2.6rem; border-bottom: 1px solid var(--line); padding-bottom: .25rem; }
+  h3 { font-size: 1.15rem; margin-top: 1.8rem; }
+  a { color: var(--accent); }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .92rem; display: block; overflow-x: auto; }
+  th, td { border: 1px solid var(--line); padding: 6px 10px; vertical-align: top; text-align: left; }
+  th { background: var(--soft); }
+  code { font-family: Consolas, "Cascadia Code", monospace; font-size: .88em; background: var(--soft);
+         padding: 1px 4px; border-radius: 3px; }
+  pre { background: #0f172a; color: #e2e8f0; padding: 14px 16px; border-radius: 6px; overflow-x: auto;
+        font-size: .85rem; line-height: 1.45; }
+  pre code { background: none; color: inherit; padding: 0; }
+  pre.mermaid { background: #fff; color: var(--ink); border: 1px solid var(--line); text-align: center; }
+  blockquote { margin: 1rem 0; padding: .5rem 1rem; border-left: 4px solid var(--accent); background: var(--soft); }
+  ul.task-list, ul:has(> li > label > input[type=checkbox]) { list-style: none; padding-left: 1rem; }
+  nav#TOC { background: var(--soft); border: 1px solid var(--line); border-radius: 6px; padding: 8px 20px; margin: 1.5rem 0; }
+  nav#TOC ul { margin: .2rem 0; }
+  @media print { pre { white-space: pre-wrap; } nav#TOC { display: none; } }
+</style>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'strict' });
+</script>

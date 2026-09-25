@@ -1,15 +1,14 @@
 node_modules/
-dist/
-build/
-
 .env
-.env.local
-.env.*.local
-
-*.log
-
+.env.*
+!.env.example
+dist/
+.turbo/
 coverage/
+*.log
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
 
-.vscode/
-
-.prisma/
+# Deck working files: drafts, figures, screenshots, the .pptx. Kept off the public repo.
+docs/deck/

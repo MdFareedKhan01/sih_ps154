@@ -1,8 +1,4 @@
-export * from "./config.js";
-export * from "./claim.js";
-export * from "./canonical.js";
-export * from "./formats.js";
-export * from "./verification.js";
-
-export * from "./api.js";
-export * from "./events.js";
+// The shared Zod contract. Filled at hour zero:
+//   D writes config.ts, claim.ts, canonical.ts, formats.ts, verification.ts (Guide D, Step 1)
+//   B writes api.ts, events.ts, spans.ts and replaces this file (Guide B, Step 1)
+export {};
