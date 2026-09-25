@@ -1,5 +1,9 @@
 {
   "name": "@ps154/server",
   "private": true,
-  "type": "module"
+  "type": "module",
+  
+  "dependencies": {
+    "@ps154/shared": "*"
+  }
 }
