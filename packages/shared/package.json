@@ -1,5 +1,9 @@
 {
   "name": "@ps154/shared",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "zod": "^4.0.0"
+  }
 }
