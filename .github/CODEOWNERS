@@ -1,0 +1,12 @@
+# Pull requests automatically request review from the owner of each folder they touch.
+# Replace the placeholders with GitHub usernames, then uncomment the lines.
+# Rule order matters: the last matching line wins.
+
+# *                   @member-b-username
+# /apps/server/       @member-b-username
+# /prisma/            @member-b-username
+# /apps/web/          @member-c-username
+# /packages/ai/       @member-d-username
+# /samples/           @member-d-username
+# /docs/              @member-a-username
+# /packages/shared/   @member-b-username @member-c-username @member-d-username
