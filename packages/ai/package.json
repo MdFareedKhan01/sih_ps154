@@ -1,6 +1,0 @@
-{
-  "name": "@ps154/ai",
-  "private": true,
-  "type": "module",
-  "main": "src/index.ts"
-}
