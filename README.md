@@ -122,7 +122,6 @@ The repository belongs to D, Md Fareed Khan (@MdFareedKhan01); only the owner ca
    - *Block force pushes*
 
    On a public repository this costs nothing. Until it is on, `main` accepts direct pushes: keep the rule by agreement.
-3. **Delete the merged `MetaMorph-AI` branch** on GitHub (*Branches → delete*). Everyone else deletes their local copy with `git branch -d MetaMorph-AI`, if they have one.
 
 `.github/CODEOWNERS` already names each folder's owner, so every pull request requests the right reviewer by itself, once that person has accepted the invitation.
 

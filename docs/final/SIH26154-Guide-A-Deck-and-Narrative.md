@@ -443,7 +443,6 @@ The scaffold is on `main`, and CI passed on it. D owns the repository, so the se
 - [ ] Send each member their own guide and the repository link
 - [ ] B, C and D have accepted their invitations and can each run `git clone https://github.com/MdFareedKhan01/sih_ps154.git`, `npm install` and `npm run check` on their own laptop
 - [ ] D has added the ruleset protecting `main`. Until then, remind everyone: no direct pushes to `main`
-- [ ] D has deleted the merged `MetaMorph-AI` branch, so nobody builds on it by mistake
 - [ ] Your first pull request, this guide update included, has merged, so everyone clones the guides with the team's names in them
 
 ### Reviews that are yours

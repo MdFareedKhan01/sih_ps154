@@ -139,7 +139,6 @@ DEMO_PERTURB=0
 
 - [ ] **Settings → Collaborators → Add people**: invite `@quamarfarhan007` (B), `@Faizan0916` (C) and `@Rehan9599` (A) with *Write* access, if they are not collaborators yet
 - [ ] **Settings → Rules → Rulesets**: protect `main` — pull request with 1 approval, status check **typecheck, test, build** required, force pushes blocked. Free on a public repository. Until it is on, nothing stops a direct push to `main`
-- [ ] **Branches**: delete the merged `MetaMorph-AI` branch
 - [ ] Never approve your own pull request by switching the rules off. If a PR of yours is urgent and nobody is free, ask in the team chat; one approval takes a minute
 
 **Pin the cloud model before the demo.** `gemini-flash-latest` follows Google's newest Flash model. That is convenient on Friday and risky on stage. The adapter in Step 2 logs the exact model version each response came from; on Monday, put that exact id in `CLOUD_MODEL`.
