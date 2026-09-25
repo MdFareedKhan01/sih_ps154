@@ -63,6 +63,17 @@ Two processes run from one package: `npm run dev:api` serves HTTP and WebSockets
 | D | A worker that calls `runFormat` with real sources | Sat 26, afternoon |
 | A | The audit-tamper demo command, and a screenshot of a network monitor during a restricted run | Sun 27 |
 
+### The team and the repository
+
+| | Role | Name | GitHub |
+| --- | --- | --- | --- |
+| A | Deck & narrative | Rehan Fazal | [@Rehan9599](https://github.com/Rehan9599) |
+| B | Backend | Farhan Quamar | [@quamarfarhan007](https://github.com/quamarfarhan007) |
+| C | Frontend | Faizan Ahmad Ansari | [@Faizan0916](https://github.com/Faizan0916) |
+| D | AI systems, repository owner | Md Fareed Khan | [@MdFareedKhan01](https://github.com/MdFareedKhan01) |
+
+The code lives at [github.com/MdFareedKhan01/sih_ps154](https://github.com/MdFareedKhan01/sih_ps154): [pull requests](https://github.com/MdFareedKhan01/sih_ps154/pulls) · [CI runs](https://github.com/MdFareedKhan01/sih_ps154/actions). The repository is **public**: never commit `.env`, a key or real data. Reviews are requested automatically from each folder's owner (`.github/CODEOWNERS`).
+
 ## 2. Your four days
 
 Each day ends at a gate. If a gate slips, cut scope from the next day, never from the gate.
@@ -89,7 +100,7 @@ Install before the hour-zero meeting, so the meeting is spent on the repo, not o
 
 1. **Node 22 LTS.** Check with `node -v`; 20.12 or later works.
 2. **Docker Desktop.** On Windows, enable the WSL 2 backend. Check with `docker compose version`.
-3. **Git**, and a **GitHub account** with access to the team repository (A sends the invitation). `main` is protected: nobody pushes to it directly, you included. All work arrives through pull requests (Step 12).
+3. **Git**, and a **GitHub account** with write access to [the team repository](https://github.com/MdFareedKhan01/sih_ps154). D, Md Fareed Khan, owns it and sends the invitation; accept it from the email or at [your invitations](https://github.com/MdFareedKhan01/sih_ps154/invitations). `main` is protected: nobody pushes to it directly, you included. All work arrives through pull requests (Step 12).
 4. **A database viewer** — DBeaver, pgAdmin or the VS Code PostgreSQL extension. You will look at rows constantly on Saturday.
 5. **A REST client** — VS Code's Thunder Client, Postman, or `curl`. On Windows PowerShell, type `curl.exe`, because plain `curl` is an alias for a different command there.
 
@@ -102,7 +113,7 @@ You drive the first two hours on Friday with all four present. The monorepo alre
 **Everyone, on their own machine.** Git Bash works as written; PowerShell differs only where a comment says so.
 
 ```bash
-git clone <repo-url> ps154 && cd ps154
+git clone https://github.com/MdFareedKhan01/sih_ps154.git && cd sih_ps154
 npm install              # every workspace, one lockfile
 cp .env.example .env     # PowerShell: Copy-Item .env.example .env
 docker compose up -d     # PostgreSQL and Redis; C and D may skip this until Saturday
@@ -115,7 +126,7 @@ A placeholder page at `http://localhost:5173` means that machine is ready. If `d
 **The layout.** One folder, one owner; only `packages/shared` changes by agreement.
 
 ```text
-ps154/
+sih_ps154/
   package.json            workspaces + every run script            B
   turbo.json              task graph: dev, typecheck, test, build  B
   tsconfig.base.json      compiler settings every package extends  B
@@ -1633,7 +1644,7 @@ npm run smoke                          # with dev:api and dev:worker running
 git push -u origin server/ingestion    # later pushes: plain git push
 ```
 
-**4. Open the pull request.** On GitHub, the repository page shows a *Compare & pull request* button for your fresh branch. Base `main`, compare your branch. The description arrives pre-filled from the team template: fill in the guide step and SRS IDs, paste the smoke output, tick the boxes. With the GitHub CLI installed, `gh pr create --fill --base main` does the same from the terminal.
+**4. Open the pull request.** Open [the repository](https://github.com/MdFareedKhan01/sih_ps154): a *Compare & pull request* banner appears for a freshly pushed branch. If it has gone, use [New pull request](https://github.com/MdFareedKhan01/sih_ps154/compare) and pick your branch. Base `main`, compare your branch. The description arrives pre-filled from the team template: fill in the guide step and SRS IDs, paste the smoke output, tick the boxes. With the GitHub CLI installed, `gh pr create --fill --base main` does the same from the terminal.
 
 What your PRs must say:
 

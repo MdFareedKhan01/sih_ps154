@@ -49,6 +49,17 @@ flowchart LR
 | From B | Login, ingest, batch and stream endpoints running | Sat 26, evening |
 | To A | Six screenshots, listed in Step 8 | Sun 27, evening |
 
+### The team and the repository
+
+| | Role | Name | GitHub |
+| --- | --- | --- | --- |
+| A | Deck & narrative | Rehan Fazal | [@Rehan9599](https://github.com/Rehan9599) |
+| B | Backend | Farhan Quamar | [@quamarfarhan007](https://github.com/quamarfarhan007) |
+| C | Frontend | Faizan Ahmad Ansari | [@Faizan0916](https://github.com/Faizan0916) |
+| D | AI systems, repository owner | Md Fareed Khan | [@MdFareedKhan01](https://github.com/MdFareedKhan01) |
+
+The code lives at [github.com/MdFareedKhan01/sih_ps154](https://github.com/MdFareedKhan01/sih_ps154): [pull requests](https://github.com/MdFareedKhan01/sih_ps154/pulls) · [CI runs](https://github.com/MdFareedKhan01/sih_ps154/actions). The repository is **public**: never commit `.env`, a key or real data. Reviews are requested automatically from each folder's owner (`.github/CODEOWNERS`).
+
 ## 2. Your four days
 
 Each day ends at a gate. If a gate slips, cut polish from the next day, never the gate.
@@ -74,7 +85,7 @@ Each day ends at a gate. If a gate slips, cut polish from the next day, never th
 The app is already scaffolded in `apps/web`, inside the monorepo, so there is nothing to create. Get the repo running on your machine — the same commands the whole team runs at hour zero (Guide B, Step 1):
 
 ```bash
-git clone <repo-url> ps154 && cd ps154
+git clone https://github.com/MdFareedKhan01/sih_ps154.git && cd sih_ps154
 npm install                    # every workspace, one lockfile
 cp .env.example .env           # PowerShell: Copy-Item .env.example .env
 npm run dev:web                # http://localhost:5173 shows a placeholder page
@@ -1610,7 +1621,7 @@ npm run check                          # must be green: CI runs exactly this
 git push -u origin web/provenance      # later pushes: plain git push
 ```
 
-**4. Open the pull request.** On GitHub, the repository page shows a *Compare & pull request* button for your fresh branch. Base `main`, compare your branch. Fill in the template: the guide step and AC, what you clicked to check it, and **a screenshot or short GIF of every screen you changed** — `Win + Shift + S`, then paste straight into the description; ScreenToGif for a clip. These double as A's deck material. With the GitHub CLI installed, `gh pr create --fill --base main` opens it from the terminal.
+**4. Open the pull request.** Open [the repository](https://github.com/MdFareedKhan01/sih_ps154): a *Compare & pull request* banner appears for a freshly pushed branch. If it has gone, use [New pull request](https://github.com/MdFareedKhan01/sih_ps154/compare) and pick your branch. Base `main`, compare your branch. Fill in the template: the guide step and AC, what you clicked to check it, and **a screenshot or short GIF of every screen you changed** — `Win + Shift + S`, then paste straight into the description; ScreenToGif for a clip. These double as A's deck material. With the GitHub CLI installed, `gh pr create --fill --base main` opens it from the terminal.
 
 | Your change | Ask for review from |
 | --- | --- |

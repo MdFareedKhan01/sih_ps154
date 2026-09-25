@@ -169,6 +169,71 @@
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   
   <style>
@@ -238,6 +303,11 @@ and words to avoid</a></li>
 <li><a href="#step-9--architecture-note-readme-and-the-final-checklist"
 id="toc-step-9--architecture-note-readme-and-the-final-checklist">Step 9
 — Architecture note, README and the final checklist</a></li>
+<li><a
+href="#step-10--the-repository-getting-everyone-in-reviews-and-your-own-pull-requests"
+id="toc-step-10--the-repository-getting-everyone-in-reviews-and-your-own-pull-requests">Step
+10 — The repository: getting everyone in, reviews and your own pull
+requests</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -288,7 +358,14 @@ one</td>
 <td>Draft in Phase 2</td>
 </tr>
 <tr>
-<td>The README</td>
+<td>Everyone in the repository: invitations accepted, <code>main</code>
+protected by D, each laptop running <code>npm run check</code></td>
+<td>The whole team</td>
+<td>Fri 25, before hour zero (Step 10)</td>
+</tr>
+<tr>
+<td>The README's product sections, above the developer sections already
+there</td>
 <td>The repository</td>
 <td>Phase 2</td>
 </tr>
@@ -305,8 +382,10 @@ one</td>
 <tbody>
 <tr>
 <td><strong>Fri 25</strong></td>
-<td>Verify the format (Step 0). Read Steps 1 and 2. Write every slide's
-text (Step 3). List the Blueprint deck's fixes (Step 4)</td>
+<td>Send each member their guide; check everyone is in the repository
+before hour zero (Step 10). Verify the format (Step 0). Read Steps 1 and
+2. Write every slide's text (Step 3). List the Blueprint deck's fixes
+(Step 4)</td>
 <td>Every slide has final wording, and no claim on any slide is
 unsupported</td>
 </tr>
@@ -338,6 +417,53 @@ aloud once</td>
 <p><strong>Submit on Tuesday, not Wednesday.</strong> Portals slow down
 on deadline day, and a day of buffer costs nothing. After submission you
 join B on security and integration for the finale build.</p>
+<h3 id="the-team-and-the-repository">The team and the repository</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Role</th>
+<th>Name</th>
+<th>GitHub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Deck &amp; narrative</td>
+<td>Rehan Fazal</td>
+<td><a href="https://github.com/Rehan9599">@Rehan9599</a></td>
+</tr>
+<tr>
+<td>B</td>
+<td>Backend</td>
+<td>Farhan Quamar</td>
+<td><a
+href="https://github.com/quamarfarhan007">@quamarfarhan007</a></td>
+</tr>
+<tr>
+<td>C</td>
+<td>Frontend</td>
+<td>Faizan Ahmad Ansari</td>
+<td><a href="https://github.com/Faizan0916">@Faizan0916</a></td>
+</tr>
+<tr>
+<td>D</td>
+<td>AI systems, repository owner</td>
+<td>Md Fareed Khan</td>
+<td><a href="https://github.com/MdFareedKhan01">@MdFareedKhan01</a></td>
+</tr>
+</tbody>
+</table>
+<p>The code lives at <a
+href="https://github.com/MdFareedKhan01/sih_ps154">github.com/MdFareedKhan01/sih_ps154</a>:
+<a href="https://github.com/MdFareedKhan01/sih_ps154/pulls">pull
+requests</a> · <a
+href="https://github.com/MdFareedKhan01/sih_ps154/actions">CI runs</a>.
+The repository is <strong>public</strong>: never commit
+<code>.env</code>, a key or real data. Reviews are requested
+automatically from each folder's owner
+(<code>.github/CODEOWNERS</code>).</p>
 <h2 id="step-0--verify-the-submission-format-today">Step 0 — Verify the
 submission format today</h2>
 <p>Every hour spent on slides before this check is at risk. Do it first,
@@ -901,6 +1027,19 @@ screenshot on Sunday night is a slide you cannot finish.</p>
 </tr>
 </tbody>
 </table>
+<p><strong>Where assets live.</strong> Keep the deck's sources in the
+repository, so nothing exists only on one laptop the night before
+submission:</p>
+<pre class="text"><code>docs/deck/
+  figures/        F1–F5 sources (.drawio or .excalidraw) and their PNG exports
+  screenshots/    C&#39;s six screenshots, B&#39;s network-monitor capture
+  numbers.md      D&#39;s measured numbers table and the exact model names, as sent
+  SIH26154-deck.pptx   the final deck only, not every draft</code></pre>
+<p>Screenshots arrive in teammates' pull requests, since every PR that
+changes a screen carries one, or in the team chat; copy the ones you use
+into <code>docs/deck/screenshots/</code>. Keep the video out of git:
+host it where the portal says, and put its link in
+<code>numbers.md</code>.</p>
 <h2 id="step-6--the-two-minute-video">Step 6 — The two-minute video</h2>
 <p>One story, not fifteen features. Every shot proves one of the four
 beats. The voiceover is about 260 words, which fits two minutes at a
@@ -1277,20 +1416,23 @@ next</td>
 </tr>
 </tbody>
 </table>
-<h3 id="the-readme--phase-2-in-docs-then-the-repo-root">The README —
-Phase 2, in <code>docs/</code> then the repo root</h3>
+<h3 id="the-readme--phase-2-at-the-repo-root">The README — Phase 2, at
+the repo root</h3>
+<p>A developer README already exists at the repo root: layout, quick
+start, commands, the pull-request workflow, CI, troubleshooting, the
+data note and the owners table. Keep all of it. In Phase 2, add the
+product sections <strong>above</strong> it, so a judge who opens the
+repository reads the product first and the setup second:</p>
 <ol type="1">
-<li><p>One line on what it is, the tagline, and screenshot #4.</p></li>
-<li><p>Quick start: prerequisites, <code>npm install</code>, copy
-<code>.env.example</code>, <code>docker compose up -d</code>, the three
-<code>db:</code> scripts, <code>ollama pull</code>, then
-<code>dev:api</code>, <code>dev:worker</code> and <code>dev:web</code>
-in three terminals. The Backend Guide has every command.</p></li>
+<li><p>One line on what it is, the tagline, and screenshot #4, from
+<code>docs/deck/screenshots/</code>.</p></li>
 <li><p>The demo, as four numbered beats with the exact clicks.</p></li>
-<li><p>The architecture figure and a link to the Final SRS.</p></li>
-<li><p>The team and who owns which folder.</p></li>
-<li><p>A data note: the sample is synthetic.</p></li>
+<li><p>The architecture figure F2, and a link to the Final SRS.</p></li>
+<li><p>Measured numbers from <code>docs/deck/numbers.md</code>, each
+labelled <em>measured</em> or <em>target</em>.</p></li>
 </ol>
+<p>The quick start, the team table and the data note are already there;
+check they are still true, rather than writing them again.</p>
 <h3 id="before-you-press-submit">Before you press Submit</h3>
 <ul class="task-list">
 <li><label><input type="checkbox" />The official template is used, with
@@ -1319,5 +1461,98 @@ deck</label></li>
 <li><label><input type="checkbox" />Submitted on Tuesday, with a
 screenshot of the confirmation saved</label></li>
 </ul>
+<h2
+id="step-10--the-repository-getting-everyone-in-reviews-and-your-own-pull-requests">Step
+10 — The repository: getting everyone in, reviews and your own pull
+requests</h2>
+<p>The team works in one Turborepo monorepo at <a
+href="https://github.com/MdFareedKhan01/sih_ps154">github.com/MdFareedKhan01/sih_ps154</a>.
+The README at its root is the manual: layout, commands and the
+pull-request workflow. You have three jobs in it: make sure all four of
+you can work in it on Friday, review what the deck will quote, and put
+your own work through the same pull requests as everyone else.</p>
+<h3 id="before-hour-zero-on-friday">Before hour zero on Friday</h3>
+<p>The scaffold is on <code>main</code>, and CI passed on it. D owns the
+repository, so the settings are D's (Guide D, Step 0, and the README's
+<em>Repository settings</em>); your part is checking that they
+happened:</p>
+<ul class="task-list">
+<li><label><input type="checkbox" />Send each member their own guide and
+the repository link</label></li>
+<li><label><input type="checkbox" />B, C and D have accepted their
+invitations and can each run
+<code>git clone https://github.com/MdFareedKhan01/sih_ps154.git</code>,
+<code>npm install</code> and <code>npm run check</code> on their own
+laptop</label></li>
+<li><label><input type="checkbox" />D has added the ruleset protecting
+<code>main</code>. Until then, remind everyone: no direct pushes to
+<code>main</code></label></li>
+<li><label><input type="checkbox" />D has deleted the merged
+<code>MetaMorph-AI</code> branch, so nobody builds on it by
+mistake</label></li>
+<li><label><input type="checkbox" />Your first pull request, this guide
+update included, has merged, so everyone clones the guides with the
+team's names in them</label></li>
+</ul>
+<h3 id="reviews-that-are-yours">Reviews that are yours</h3>
+<p>You are not a code reviewer, but some pull requests change words the
+deck and the video quote. Ask to be added as a reviewer on these, and
+check them against Step 8's words to avoid:</p>
+<table>
+<thead>
+<tr>
+<th>PR changes</th>
+<th>Why you check it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C's classification wording, badges, card labels</td>
+<td>They are read aloud in the demo and appear in screenshots</td>
+</tr>
+<tr>
+<td>D's finding <code>detail</code> text</td>
+<td>Screenshot #5 shows it on a slide</td>
+</tr>
+<tr>
+<td>Anything in <code>docs/final/</code></td>
+<td>The SRS and the guides are the team's contract</td>
+</tr>
+<tr>
+<td>The README</td>
+<td>The first page a judge sees</td>
+</tr>
+</tbody>
+</table>
+<h3 id="your-own-pull-requests">Your own pull requests</h3>
+<p>Nobody pushes to <code>main</code>, you included. Your work goes in
+<code>docs/</code>:</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch main</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">-c</span> docs/deck-figures           <span class="co"># docs/&lt;what&gt;: docs/qa-sheet, docs/readme, docs/guide-fix</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># ...add files under docs/deck/, or edit a guide...</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run docs:html                          <span class="co"># only after editing a guide or the SRS: rebuilds its .html copy</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add docs</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;docs: figures F1 to F5, sources and exports&quot;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin docs/deck-figures</span></code></pre></div>
+<p>Then open <a href="https://github.com/MdFareedKhan01/sih_ps154">the
+repository</a>, press <em>Compare &amp; pull request</em> (or use <a
+href="https://github.com/MdFareedKhan01/sih_ps154/compare">New pull
+request</a>) and fill in the template. The code checks do not apply to
+you, so say what you checked instead: the HTML opens and its diagrams
+render, the links work, every number is in D's table. CI still runs
+<code>npm run check</code> and must pass; a docs-only change cannot
+break it.</p>
+<p><strong>Editing the SRS or a guide.</strong> It is the contract
+everyone builds from, so post in the team chat before the pull request,
+and ask the owner of the affected guide to review.
+<code>npm run docs:html</code> needs <a
+href="https://pandoc.org">pandoc</a>; commit the <code>.md</code> and
+the rebuilt <code>.html</code> together, so they never disagree.</p>
+<p><strong>Binary files.</strong> Commit the final deck and final figure
+exports, not every draft: git keeps every version of a binary forever.
+Never commit the video, a real report, or anything from the portal that
+carries personal data.</p>
 </body>
 </html>

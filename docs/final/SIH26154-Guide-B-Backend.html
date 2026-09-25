@@ -497,6 +497,53 @@ during a restricted run</td>
 </tr>
 </tbody>
 </table>
+<h3 id="the-team-and-the-repository">The team and the repository</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Role</th>
+<th>Name</th>
+<th>GitHub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Deck &amp; narrative</td>
+<td>Rehan Fazal</td>
+<td><a href="https://github.com/Rehan9599">@Rehan9599</a></td>
+</tr>
+<tr>
+<td>B</td>
+<td>Backend</td>
+<td>Farhan Quamar</td>
+<td><a
+href="https://github.com/quamarfarhan007">@quamarfarhan007</a></td>
+</tr>
+<tr>
+<td>C</td>
+<td>Frontend</td>
+<td>Faizan Ahmad Ansari</td>
+<td><a href="https://github.com/Faizan0916">@Faizan0916</a></td>
+</tr>
+<tr>
+<td>D</td>
+<td>AI systems, repository owner</td>
+<td>Md Fareed Khan</td>
+<td><a href="https://github.com/MdFareedKhan01">@MdFareedKhan01</a></td>
+</tr>
+</tbody>
+</table>
+<p>The code lives at <a
+href="https://github.com/MdFareedKhan01/sih_ps154">github.com/MdFareedKhan01/sih_ps154</a>:
+<a href="https://github.com/MdFareedKhan01/sih_ps154/pulls">pull
+requests</a> · <a
+href="https://github.com/MdFareedKhan01/sih_ps154/actions">CI runs</a>.
+The repository is <strong>public</strong>: never commit
+<code>.env</code>, a key or real data. Reviews are requested
+automatically from each folder's owner
+(<code>.github/CODEOWNERS</code>).</p>
 <h2 id="2-your-four-days">2. Your four days</h2>
 <p>Each day ends at a gate. If a gate slips, cut scope from the next
 day, never from the gate.</p>
@@ -565,9 +612,14 @@ or later works.</li>
 <li><strong>Docker Desktop.</strong> On Windows, enable the WSL 2
 backend. Check with <code>docker compose version</code>.</li>
 <li><strong>Git</strong>, and a <strong>GitHub account</strong> with
-access to the team repository (A sends the invitation).
-<code>main</code> is protected: nobody pushes to it directly, you
-included. All work arrives through pull requests (Step 12).</li>
+write access to <a
+href="https://github.com/MdFareedKhan01/sih_ps154">the team
+repository</a>. D, Md Fareed Khan, owns it and sends the invitation;
+accept it from the email or at <a
+href="https://github.com/MdFareedKhan01/sih_ps154/invitations">your
+invitations</a>. <code>main</code> is protected: nobody pushes to it
+directly, you included. All work arrives through pull requests (Step
+12).</li>
 <li><strong>A database viewer</strong> — DBeaver, pgAdmin or the VS Code
 PostgreSQL extension. You will look at rows constantly on Saturday.</li>
 <li><strong>A REST client</strong> — VS Code's Thunder Client, Postman,
@@ -587,7 +639,7 @@ shared contract.</p>
 <p><strong>Everyone, on their own machine.</strong> Git Bash works as
 written; PowerShell differs only where a comment says so.</p>
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="op">&lt;</span>repo-url<span class="op">&gt;</span> ps154 <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> ps154</span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/MdFareedKhan01/sih_ps154.git <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> sih_ps154</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install              <span class="co"># every workspace, one lockfile</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> .env.example .env     <span class="co"># PowerShell: Copy-Item .env.example .env</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> compose up <span class="at">-d</span>     <span class="co"># PostgreSQL and Redis; C and D may skip this until Saturday</span></span>
@@ -600,7 +652,7 @@ PostgreSQL or Redis already installed on that laptop holds the port; the
 troubleshooting table has the two-line fix.</p>
 <p><strong>The layout.</strong> One folder, one owner; only
 <code>packages/shared</code> changes by agreement.</p>
-<pre class="text"><code>ps154/
+<pre class="text"><code>sih_ps154/
   package.json            workspaces + every run script            B
   turbo.json              task graph: dev, typecheck, test, build  B
   tsconfig.base.json      compiler settings every package extends  B
@@ -2269,13 +2321,17 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb50-1"><a href=
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run check                          <span class="co"># must be green: CI runs exactly this</span></span>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run smoke                          <span class="co"># with dev:api and dev:worker running</span></span>
 <span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin server/ingestion    <span class="co"># later pushes: plain git push</span></span></code></pre></div>
-<p><strong>4. Open the pull request.</strong> On GitHub, the repository
-page shows a <em>Compare &amp; pull request</em> button for your fresh
-branch. Base <code>main</code>, compare your branch. The description
-arrives pre-filled from the team template: fill in the guide step and
-SRS IDs, paste the smoke output, tick the boxes. With the GitHub CLI
-installed, <code>gh pr create --fill --base main</code> does the same
-from the terminal.</p>
+<p><strong>4. Open the pull request.</strong> Open <a
+href="https://github.com/MdFareedKhan01/sih_ps154">the repository</a>: a
+<em>Compare &amp; pull request</em> banner appears for a freshly pushed
+branch. If it has gone, use <a
+href="https://github.com/MdFareedKhan01/sih_ps154/compare">New pull
+request</a> and pick your branch. Base <code>main</code>, compare your
+branch. The description arrives pre-filled from the team template: fill
+in the guide step and SRS IDs, paste the smoke output, tick the boxes.
+With the GitHub CLI installed,
+<code>gh pr create --fill --base main</code> does the same from the
+terminal.</p>
 <p>What your PRs must say:</p>
 <table>
 <thead>

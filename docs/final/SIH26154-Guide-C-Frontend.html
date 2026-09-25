@@ -442,6 +442,53 @@ repaired</td>
 </tr>
 </tbody>
 </table>
+<h3 id="the-team-and-the-repository">The team and the repository</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Role</th>
+<th>Name</th>
+<th>GitHub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Deck &amp; narrative</td>
+<td>Rehan Fazal</td>
+<td><a href="https://github.com/Rehan9599">@Rehan9599</a></td>
+</tr>
+<tr>
+<td>B</td>
+<td>Backend</td>
+<td>Farhan Quamar</td>
+<td><a
+href="https://github.com/quamarfarhan007">@quamarfarhan007</a></td>
+</tr>
+<tr>
+<td>C</td>
+<td>Frontend</td>
+<td>Faizan Ahmad Ansari</td>
+<td><a href="https://github.com/Faizan0916">@Faizan0916</a></td>
+</tr>
+<tr>
+<td>D</td>
+<td>AI systems, repository owner</td>
+<td>Md Fareed Khan</td>
+<td><a href="https://github.com/MdFareedKhan01">@MdFareedKhan01</a></td>
+</tr>
+</tbody>
+</table>
+<p>The code lives at <a
+href="https://github.com/MdFareedKhan01/sih_ps154">github.com/MdFareedKhan01/sih_ps154</a>:
+<a href="https://github.com/MdFareedKhan01/sih_ps154/pulls">pull
+requests</a> · <a
+href="https://github.com/MdFareedKhan01/sih_ps154/actions">CI runs</a>.
+The repository is <strong>public</strong>: never commit
+<code>.env</code>, a key or real data. Reviews are requested
+automatically from each folder's owner
+(<code>.github/CODEOWNERS</code>).</p>
 <h2 id="2-your-four-days">2. Your four days</h2>
 <p>Each day ends at a gate. If a gate slips, cut polish from the next
 day, never the gate.</p>
@@ -501,7 +548,7 @@ monorepo, so there is nothing to create. Get the repo running on your
 machine — the same commands the whole team runs at hour zero (Guide B,
 Step 1):</p>
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="op">&lt;</span>repo-url<span class="op">&gt;</span> ps154 <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> ps154</span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/MdFareedKhan01/sih_ps154.git <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> sih_ps154</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install                    <span class="co"># every workspace, one lockfile</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> .env.example .env           <span class="co"># PowerShell: Copy-Item .env.example .env</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run dev:web                <span class="co"># http://localhost:5173 shows a placeholder page</span></span>
@@ -2201,15 +2248,19 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb41-1"><a href=
 <div class="sourceCode" id="cb42"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run check                          <span class="co"># must be green: CI runs exactly this</span></span>
 <span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin web/provenance      <span class="co"># later pushes: plain git push</span></span></code></pre></div>
-<p><strong>4. Open the pull request.</strong> On GitHub, the repository
-page shows a <em>Compare &amp; pull request</em> button for your fresh
-branch. Base <code>main</code>, compare your branch. Fill in the
-template: the guide step and AC, what you clicked to check it, and
-<strong>a screenshot or short GIF of every screen you changed</strong> —
-<code>Win + Shift + S</code>, then paste straight into the description;
-ScreenToGif for a clip. These double as A's deck material. With the
-GitHub CLI installed, <code>gh pr create --fill --base main</code> opens
-it from the terminal.</p>
+<p><strong>4. Open the pull request.</strong> Open <a
+href="https://github.com/MdFareedKhan01/sih_ps154">the repository</a>: a
+<em>Compare &amp; pull request</em> banner appears for a freshly pushed
+branch. If it has gone, use <a
+href="https://github.com/MdFareedKhan01/sih_ps154/compare">New pull
+request</a> and pick your branch. Base <code>main</code>, compare your
+branch. Fill in the template: the guide step and AC, what you clicked to
+check it, and <strong>a screenshot or short GIF of every screen you
+changed</strong> — <code>Win + Shift + S</code>, then paste straight
+into the description; ScreenToGif for a clip. These double as A's deck
+material. With the GitHub CLI installed,
+<code>gh pr create --fill --base main</code> opens it from the
+terminal.</p>
 <table>
 <thead>
 <tr>

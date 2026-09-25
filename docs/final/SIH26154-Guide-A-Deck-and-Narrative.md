@@ -16,18 +16,29 @@ You are not the team's scribe. You own the argument: what the problem is, why th
 | A demo video of at most two minutes, if links are allowed | The portal | Mon 28 |
 | The jury Q&A sheet | The whole team rehearses from it | Mon 28 |
 | An architecture note of at most two pages, if the PS asks for one | The finale | Draft in Phase 2 |
-| The GitHub repository: pushed, team invited, `main` protected | The whole team | Fri 25, before hour zero (Step 10) |
+| Everyone in the repository: invitations accepted, `main` protected by D, each laptop running `npm run check` | The whole team | Fri 25, before hour zero (Step 10) |
 | The README's product sections, above the developer sections already there | The repository | Phase 2 |
 
 | Day | Work | Done means |
 |----|----|----|
-| **Fri 25** | Push the repo and invite the team before hour zero (Step 10). Verify the format (Step 0). Read Steps 1 and 2. Write every slide's text (Step 3). List the Blueprint deck's fixes (Step 4) | Every slide has final wording, and no claim on any slide is unsupported |
+| **Fri 25** | Send each member their guide; check everyone is in the repository before hour zero (Step 10). Verify the format (Step 0). Read Steps 1 and 2. Write every slide's text (Step 3). List the Blueprint deck's fixes (Step 4) | Every slide has final wording, and no claim on any slide is unsupported |
 | **Sat 26** | Build the figures (Step 5). Write the Q&A sheet (Step 7). Script the video with C (Step 6) | Figures done; Q&A sheet first draft; video script agreed |
 | **Sun 27** | Collect screenshots from C, the network-monitor capture from B, measured numbers from D. Run a Q&A drill with the team | Assets in; the deck is complete except for the video link |
 | **Mon 28** | Record and edit the video. Final deck. Timed dry run | Deck and video final; every member has answered the Q&A sheet aloud once |
 | **Tue 29** | Submit. Screenshot the confirmation | Submitted a day early |
 
 **Submit on Tuesday, not Wednesday.** Portals slow down on deadline day, and a day of buffer costs nothing. After submission you join B on security and integration for the finale build.
+
+### The team and the repository
+
+| | Role | Name | GitHub |
+| --- | --- | --- | --- |
+| A | Deck & narrative | Rehan Fazal | [@Rehan9599](https://github.com/Rehan9599) |
+| B | Backend | Farhan Quamar | [@quamarfarhan007](https://github.com/quamarfarhan007) |
+| C | Frontend | Faizan Ahmad Ansari | [@Faizan0916](https://github.com/Faizan0916) |
+| D | AI systems, repository owner | Md Fareed Khan | [@MdFareedKhan01](https://github.com/MdFareedKhan01) |
+
+The code lives at [github.com/MdFareedKhan01/sih_ps154](https://github.com/MdFareedKhan01/sih_ps154): [pull requests](https://github.com/MdFareedKhan01/sih_ps154/pulls) · [CI runs](https://github.com/MdFareedKhan01/sih_ps154/actions). The repository is **public**: never commit `.env`, a key or real data. Reviews are requested automatically from each folder's owner (`.github/CODEOWNERS`).
 
 ## Step 0 — Verify the submission format today
 
@@ -421,19 +432,19 @@ The quick start, the team table and the data note are already there; check they 
 - [ ] Two teammates have proof-read the deck
 - [ ] Submitted on Tuesday, with a screenshot of the confirmation saved
 
-## Step 10 — The repository: setup, reviews and your own pull requests
+## Step 10 — The repository: getting everyone in, reviews and your own pull requests
 
-The team works in one Turborepo monorepo. The README at its root is the manual: layout, commands and the pull-request workflow. You have three jobs in it: set it up once, review what the deck will quote, and put your own work through the same pull requests as everyone else.
+The team works in one Turborepo monorepo at [github.com/MdFareedKhan01/sih_ps154](https://github.com/MdFareedKhan01/sih_ps154). The README at its root is the manual: layout, commands and the pull-request workflow. You have three jobs in it: make sure all four of you can work in it on Friday, review what the deck will quote, and put your own work through the same pull requests as everyone else.
 
-### Once, before hour zero on Friday
+### Before hour zero on Friday
 
-The README's *One-time GitHub setup* section has every click; in order:
+The scaffold is on `main`, and CI passed on it. D owns the repository, so the settings are D's (Guide D, Step 0, and the README's *Repository settings*); your part is checking that they happened:
 
-- [ ] On the laptop holding the repository, set your own name and email for this repository, so the first commit is yours: `git config user.name "Your Name"` and `git config user.email "<your GitHub email>"`
-- [ ] Commit the scaffold, create an empty private repository on GitHub, and push
-- [ ] Invite B, C and D with *Write* access, and send them the link
-- [ ] Add a ruleset for `main`: pull request with one approval, the CI check **typecheck, test, build** passing, no force pushes. On a private repository GitHub enforces this only on a paid plan; GitHub Pro is free with the Student Developer Pack. Without it, keep the rule by agreement
-- [ ] Put the four GitHub usernames into `.github/CODEOWNERS` and uncomment the lines, in your first pull request
+- [ ] Send each member their own guide and the repository link
+- [ ] B, C and D have accepted their invitations and can each run `git clone https://github.com/MdFareedKhan01/sih_ps154.git`, `npm install` and `npm run check` on their own laptop
+- [ ] D has added the ruleset protecting `main`. Until then, remind everyone: no direct pushes to `main`
+- [ ] D has deleted the merged `MetaMorph-AI` branch, so nobody builds on it by mistake
+- [ ] Your first pull request, this guide update included, has merged, so everyone clones the guides with the team's names in them
 
 ### Reviews that are yours
 
@@ -461,7 +472,7 @@ git commit -m "docs: figures F1 to F5, sources and exports"
 git push -u origin docs/deck-figures
 ```
 
-Then, on GitHub, press *Compare & pull request* and fill in the template. The code checks do not apply to you, so say what you checked instead: the HTML opens and its diagrams render, the links work, every number is in D's table. CI still runs `npm run check` and must pass; a docs-only change cannot break it.
+Then open [the repository](https://github.com/MdFareedKhan01/sih_ps154), press *Compare & pull request* (or use [New pull request](https://github.com/MdFareedKhan01/sih_ps154/compare)) and fill in the template. The code checks do not apply to you, so say what you checked instead: the HTML opens and its diagrams render, the links work, every number is in D's table. CI still runs `npm run check` and must pass; a docs-only change cannot break it.
 
 **Editing the SRS or a guide.** It is the contract everyone builds from, so post in the team chat before the pull request, and ask the owner of the affected guide to review. `npm run docs:html` needs [pandoc](https://pandoc.org); commit the `.md` and the rebuilt `.html` together, so they never disagree.
 

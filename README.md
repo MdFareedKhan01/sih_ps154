@@ -4,6 +4,8 @@
 
 One trusted source in, several audience-specific artefacts out, every sentence traceable to where it came from.
 
+Repository: [github.com/MdFareedKhan01/sih_ps154](https://github.com/MdFareedKhan01/sih_ps154) — **public**, so everything committed here can be read by anyone.
+
 Status: building the Phase 1 prototype for the 30 September idea submission. The specification is [docs/final/SIH26154-SRS-Final.md](docs/final/SIH26154-SRS-Final.md); each member builds from it and from their own guide.
 
 ## Repository layout
@@ -42,7 +44,7 @@ Each document also has an `.html` copy beside it: open it in a browser for the r
 You need **Node 22 LTS** (20.12 or later works), **Git** and **Docker Desktop** — on Windows, with the WSL 2 backend. D also needs Ollama and a Gemini key (Guide D, Step 0).
 
 ```bash
-git clone <repo-url> ps154 && cd ps154
+git clone https://github.com/MdFareedKhan01/sih_ps154.git && cd sih_ps154
 npm install                  # every workspace, one lockfile
 cp .env.example .env         # PowerShell: Copy-Item .env.example .env
 docker compose up -d         # PostgreSQL + Redis
@@ -90,7 +92,7 @@ Nobody pushes to `main`. Every change arrives as a pull request with green CI an
 2. `git switch -c <area>/<topic>`, where the area is your folder: `server/ingestion`, `web/provenance`, `ai/verifier`, `shared/batch-request`, `docs/deck`
 3. Build, and commit in small steps. Stage your own folder by name — `git add apps/web` — never everything at once
 4. `npm run check`; for server changes, `npm run smoke` as well
-5. `git push -u origin <branch>`, then on GitHub press *Compare & pull request* and fill in the template. With the GitHub CLI: `gh pr create --fill --base main`
+5. `git push -u origin <branch>`, then open [the repository](https://github.com/MdFareedKhan01/sih_ps154), press *Compare & pull request* — or [New pull request](https://github.com/MdFareedKhan01/sih_ps154/compare) — and fill in the template. With the GitHub CLI: `gh pr create --fill --base main`
 6. When CI is green and a teammate approves: **Squash and merge**, **Delete branch**, then `git switch main && git pull`
 
 **The rules**
@@ -101,27 +103,28 @@ Nobody pushes to `main`. Every change arrives as a pull request with green CI an
 - To bring a long branch up to date, `git merge origin/main`. No rebasing, no force-pushes.
 - After pulling: if `package-lock.json` changed, `npm install`; if `prisma/schema.prisma` changed, `npm run db:push`.
 
-Guide B (Step 12) and Guide C (Step 10) walk through the whole flow, including who reviews what.
+Each guide walks through the whole flow for its owner, including who reviews what: Guide A Step 10, Guide B Step 12, Guide C Step 10, Guide D Step 9.
+
+**Every pull request lists here:** [open pull requests](https://github.com/MdFareedKhan01/sih_ps154/pulls) · [CI runs](https://github.com/MdFareedKhan01/sih_ps154/actions).
 
 ## Continuous integration
 
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs on every pull request and every push to `main`: `npm ci`, then `npm run check`, on Ubuntu with the Node version in `.nvmrc`. A red cross on a PR links to the failing log. The fix is always the same: reproduce it with `npm run check` locally, fix, push.
 
-## One-time GitHub setup (repository admin)
+## Repository settings (owner only)
 
-1. Create an empty **private** repository on GitHub, without a README, `.gitignore` or licence.
-2. Push this repository to it:
+The repository belongs to D, Md Fareed Khan (@MdFareedKhan01); only the owner can change its settings. The scaffold is on `main` and CI has passed on it. Still to do, once:
 
-   ```bash
-   git add -A
-   git commit -m "chore: monorepo scaffold"
-   git remote add origin https://github.com/<owner>/<repo>.git
-   git push -u origin main
-   ```
+1. **Settings → Collaborators → Add people**: invite `@quamarfarhan007`, `@Faizan0916` and `@Rehan9599` with *Write* access, if they are not collaborators already. Each accepts from the email, or at [github.com/MdFareedKhan01/sih_ps154/invitations](https://github.com/MdFareedKhan01/sih_ps154/invitations).
+2. **Settings → Rules → Rulesets → New branch ruleset**, named `main`, target the default branch, enforcement *Active*:
+   - *Require a pull request before merging*, with 1 required approval
+   - *Require status checks to pass*: add **typecheck, test, build**
+   - *Block force pushes*
 
-3. **Settings → Collaborators**: invite B, C and D with *Write* access.
-4. **Settings → Rules → Rulesets → New branch ruleset** for `main`: require a pull request with 1 approval, require the status check **typecheck, test, build** (it appears after CI's first run), and block force pushes. On a private repository, GitHub enforces rules only on a paid plan — GitHub Pro is free with the [Student Developer Pack](https://education.github.com/pack). Without it, keep the rule by agreement.
-5. In `.github/CODEOWNERS`, replace the placeholders with your GitHub usernames and uncomment the lines, so each PR requests the right reviewer automatically.
+   On a public repository this costs nothing. Until it is on, `main` accepts direct pushes: keep the rule by agreement.
+3. **Delete the merged `MetaMorph-AI` branch** on GitHub (*Branches → delete*). Everyone else deletes their local copy with `git branch -d MetaMorph-AI`, if they have one.
+
+`.github/CODEOWNERS` already names each folder's owner, so every pull request requests the right reviewer by itself, once that person has accepted the invitation.
 
 ## Troubleshooting
 
@@ -136,13 +139,13 @@ Each guide has a longer table for its own area.
 
 ## Data
 
-All sample content is synthetic and labelled as such. No real operational data, indicators or incident reports belong in this repository.
+All sample content is synthetic and labelled as such. No real operational data, indicators or incident reports belong in this repository — and because it is public, neither do `.env`, API keys or passwords. A key that reaches GitHub, even for a minute, must be revoked: deleting the commit does not unpublish it.
 
 ## Team
 
-| Member | Role | Folder |
-| --- | --- | --- |
-| A | Deck & narrative, team lead | `docs/` |
-| B | Backend | `apps/server`, `prisma/`, root config |
-| C | Frontend | `apps/web` |
-| D | AI systems | `packages/ai`, `samples/` |
+| Member | Role | Name | GitHub | Folder |
+| --- | --- | --- | --- | --- |
+| A | Deck & narrative | Rehan Fazal | [@Rehan9599](https://github.com/Rehan9599) | `docs/` |
+| B | Backend | Farhan Quamar | [@quamarfarhan007](https://github.com/quamarfarhan007) | `apps/server`, `prisma/`, root config |
+| C | Frontend | Faizan Ahmad Ansari | [@Faizan0916](https://github.com/Faizan0916) | `apps/web` |
+| D | AI systems, repository owner | Md Fareed Khan | [@MdFareedKhan01](https://github.com/MdFareedKhan01) | `packages/ai`, `samples/` |

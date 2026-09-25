@@ -63,6 +63,17 @@ Everything inside the right-hand box is yours. B owns what feeds it and what sto
 | B | `createEngine({ redis })` exposing `extractCanonical` and `runFormat` — the only two functions B calls | Sat 26, noon |
 | A | Measured numbers: seconds per format, grounding scores on the test set, local-model timing. Only numbers you actually measured | Sun 27 |
 
+### The team and the repository
+
+| | Role | Name | GitHub |
+| --- | --- | --- | --- |
+| A | Deck & narrative | Rehan Fazal | [@Rehan9599](https://github.com/Rehan9599) |
+| B | Backend | Farhan Quamar | [@quamarfarhan007](https://github.com/quamarfarhan007) |
+| C | Frontend | Faizan Ahmad Ansari | [@Faizan0916](https://github.com/Faizan0916) |
+| D | AI systems, repository owner | Md Fareed Khan | [@MdFareedKhan01](https://github.com/MdFareedKhan01) |
+
+The code lives at [github.com/MdFareedKhan01/sih_ps154](https://github.com/MdFareedKhan01/sih_ps154): [pull requests](https://github.com/MdFareedKhan01/sih_ps154/pulls) · [CI runs](https://github.com/MdFareedKhan01/sih_ps154/actions). The repository is **public**: never commit `.env`, a key or real data. Reviews are requested automatically from each folder's owner (`.github/CODEOWNERS`).
+
 ## 2. Your four days
 
 Each day ends at a gate. If a gate slips, cut scope from the next day, never from the gate.
@@ -97,7 +108,17 @@ ollama run qwen2.5:7b "Reply with the JSON {\"ok\": true} and nothing else."
 ```
 
 3. **A Gemini API key** from Google AI Studio. The free tier is enough for development. Note its requests-per-minute limit: `CLOUD_RPM` must stay under it.
-4. **The repo, running.** Clone it and run the first-time commands in the [README](../../README.md) — `npm install`, then copy `.env.example` to `.env` at the repo root. Docker is needed only once you test against B's worker, from Saturday.
+4. **The repo, running.** The same first-time commands as everyone ([README](../../README.md), Guide B Step 1):
+
+```bash
+git clone https://github.com/MdFareedKhan01/sih_ps154.git && cd sih_ps154
+npm install
+cp .env.example .env     # PowerShell: Copy-Item .env.example .env
+npm run check            # green on a fresh clone
+```
+
+Docker is needed only once you test against B's worker, from Saturday.
+
 5. **Your entries in the root `.env`.** Never commit this file; it is ignored by git. Fill these:
 
 ```bash
@@ -113,6 +134,13 @@ DEMO_PERTURB=0
 ```
 
 6. **Time your local model now.** If a 300-word answer takes more than 60 seconds, switch to the 3B model today, not on Sunday.
+
+**You own the GitHub repository.** Only the owner can change its settings, so these are yours, before hour zero. The README's *Repository settings* section has every click.
+
+- [ ] **Settings → Collaborators → Add people**: invite `@quamarfarhan007` (B), `@Faizan0916` (C) and `@Rehan9599` (A) with *Write* access, if they are not collaborators yet
+- [ ] **Settings → Rules → Rulesets**: protect `main` — pull request with 1 approval, status check **typecheck, test, build** required, force pushes blocked. Free on a public repository. Until it is on, nothing stops a direct push to `main`
+- [ ] **Branches**: delete the merged `MetaMorph-AI` branch
+- [ ] Never approve your own pull request by switching the rules off. If a PR of yours is urgent and nobody is free, ask in the team chat; one approval takes a minute
 
 **Pin the cloud model before the demo.** `gemini-flash-latest` follows Google's newest Flash model. That is convenient on Friday and risky on stage. The adapter in Step 2 logs the exact model version each response came from; on Monday, put that exact id in `CLOUD_MODEL`.
 
@@ -1713,7 +1741,7 @@ npm run try -- samples/demo-incident.md public advisory executive_summary linked
 git push -u origin ai/verifier         # later pushes: plain git push
 ```
 
-**4. Open the pull request.** On GitHub, the repository page shows a *Compare & pull request* button for your fresh branch. Base `main`, compare your branch; fill in the template. With the GitHub CLI installed, `gh pr create --fill --base main` does the same.
+**4. Open the pull request.** Open [the repository](https://github.com/MdFareedKhan01/sih_ps154): a *Compare & pull request* banner appears for a freshly pushed branch. If it has gone, use [New pull request](https://github.com/MdFareedKhan01/sih_ps154/compare) and pick your branch. Base `main`, compare your branch; fill in the template. With the GitHub CLI installed, `gh pr create --fill --base main` does the same.
 
 What your PRs must say:
 
