@@ -8,7 +8,7 @@
 // what B/D ship — that's expected and fine, this only exists to unblock
 // local typecheck/build while we build the UI against mocks.
 
-import type { Canonical, Claim, Config, Span } from '@ps154/shared';
+import type { Canonical, Claim, Config, Span, Verification } from '@ps154/shared';
 
 export type SourceRecord = {
   id: string;
@@ -21,7 +21,7 @@ export type BatchCreated = {
   batch_id: string;
 };
 
-export type ArtifactStatus = 'waiting' | 'running' | 'validating' | 'ready' | 'error';
+export type ArtifactStatus = 'waiting' | 'running' | 'validating' | 'revising' | 'ready' | 'error';
 
 export type Artifact = {
   task_id: string;
@@ -29,9 +29,11 @@ export type Artifact = {
   format_id: string;
   effective_config: Config;
   status: ArtifactStatus;
-  content?: string;
+  content?: any;
   claims?: Claim[];
   grounding_score?: number;
+  verification?: Verification | null;
+  meta?: { provider?: 'cloud' | 'local' | 'cache' };
   error_log?: string;
   version: number;
 };
