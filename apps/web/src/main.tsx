@@ -21,6 +21,11 @@ const router = createBrowserRouter([
   { path: '/gallery', element: <Gallery /> },
 ]);
 
+// Alt+P toggles projector mode — for screenshots and the demo.
+window.addEventListener('keydown', (e) => {
+  if (e.altKey && e.key.toLowerCase() === 'p') document.documentElement.classList.toggle('projector');
+});
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode><RouterProvider router={router} /></StrictMode>,
 );
