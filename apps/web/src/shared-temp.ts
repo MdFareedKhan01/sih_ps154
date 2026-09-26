@@ -2,8 +2,13 @@
 // @ps154/shared (they own these: B defines the API/batch shapes, D the
 // canonical object). Once added there, delete this file and change the
 // import in Ingest.tsx / Confirm.tsx back to '@ps154/shared'.
+//
+// Shapes here are guesses based on what the guide describes for these
+// objects (Step 1's table and Step 4's usage). They may not match exactly
+// what B/D ship — that's expected and fine, this only exists to unblock
+// local typecheck/build while we build the UI against mocks.
 
-import type { Canonical, Span } from '@ps154/shared';
+import type { Canonical, Claim, Config, Span } from '@ps154/shared';
 
 export type SourceRecord = {
   id: string;
@@ -15,3 +20,33 @@ export type SourceRecord = {
 export type BatchCreated = {
   batch_id: string;
 };
+
+export type ArtifactStatus = 'waiting' | 'running' | 'validating' | 'ready' | 'error';
+
+export type Artifact = {
+  task_id: string;
+  batch_id: string;
+  format_id: string;
+  effective_config: Config;
+  status: ArtifactStatus;
+  content?: string;
+  claims?: Claim[];
+  grounding_score?: number;
+  error_log?: string;
+  version: number;
+};
+
+export type BatchSnapshot = {
+  batch_id: string;
+  source_id: string;
+  overall_status: string;
+  stream_last_id: string;
+  global_config: Config;
+  artifacts: Artifact[];
+};
+
+export type Frame =
+  | { event: 'task.progress'; seq: string; task_id: string; status: ArtifactStatus; detail?: string }
+  | { event: 'task.completed'; seq: string; task_id: string; artifact: Artifact }
+  | { event: 'task.failed'; seq: string; task_id: string; error_code: string; message: string; retryable: boolean }
+  | { event: 'batch.completed'; seq: string; overall_status: string };
