@@ -69,6 +69,33 @@ try {
 
   console.log('\n=== CANONICAL ===');
   console.dir(canonical, { depth: 6 });
+
+  const config = {
+    audience: 'senior government officials',
+    tone: 'formal' as const,
+    detail: 'medium' as const,
+    language: 'en' as const,
+  };
+
+  const formats = [
+    'advisory',
+    'executive_summary',
+    'linkedin_post',
+  ] as const;
+
+  for (const format of formats) {
+    console.log(`\n=== ${format.toUpperCase()} ===`);
+
+    const result = await engine.runFormat({
+      canonical,
+      spans: source.spans,
+      format,
+      config,
+      classification: source.classification,
+    });
+
+    console.dir(result, { depth: 8 });
+  }
 } finally {
   await redis.quit();
 }

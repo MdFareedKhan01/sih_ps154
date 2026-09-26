@@ -5,6 +5,10 @@ import {
   extractCanonical,
   type SourceForAI,
 } from './extract';
+import {
+  runFormat,
+  type RunFormatInput,
+} from './generate';
 
 export function createEngine({
   redis,
@@ -17,6 +21,10 @@ export function createEngine({
     extractCanonical: (
       source: SourceForAI
     ) => extractCanonical(router, source),
+
+    runFormat: (
+      input: RunFormatInput
+    ) => runFormat(router, input),
   };
 }
 

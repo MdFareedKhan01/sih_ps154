@@ -115,7 +115,13 @@ export class GroqAdapter implements LLMAdapter {
       if (error instanceof TransportError) {
         throw error;
       }
-
+      console.error('Groq request failed:', {
+        status: error?.status,
+        code: error?.code,
+        type: error?.type,
+        message: error?.message,
+        error: error?.error,
+      });
       throw new TransportError(
         error?.message ?? 'Groq request failed'
       );
