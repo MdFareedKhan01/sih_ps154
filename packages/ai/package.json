@@ -9,9 +9,9 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@google/genai": "^2.24.0",
     "@ps154/shared": "*",
     "dotenv": "^18.0.3",
+    "groq-sdk": "^1.6.0",
     "ioredis": "^6.0.0",
     "zod": "^4.6.5"
   }

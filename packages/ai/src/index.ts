@@ -1,3 +1,25 @@
-// The engine's public surface: createEngine, formatsList, putCached and the error classes.
-// D replaces this file (Guide D, Step 7). B imports nothing else from this package.
-export {};
+import type { Redis } from 'ioredis';
+
+import { createRouter } from './router';
+import {
+  extractCanonical,
+  type SourceForAI,
+} from './extract';
+
+export function createEngine({
+  redis,
+}: {
+  redis: Redis;
+}) {
+  const router = createRouter(redis);
+
+  return {
+    extractCanonical: (
+      source: SourceForAI
+    ) => extractCanonical(router, source),
+  };
+}
+
+export type Engine = ReturnType<
+  typeof createEngine
+>;
