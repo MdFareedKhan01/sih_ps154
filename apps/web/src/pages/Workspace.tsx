@@ -41,6 +41,11 @@ function LiveBatch({ initial, source }: { initial: BatchView; source: SourceReco
     <SelectionContext.Provider value={{ active, select: setActive }}>
       <main className="grid h-screen grid-cols-[2fr_3fr]">
         <section className="overflow-y-auto border-r p-6">
+          {active && active.source_refs.length === 0 && (
+            <p className="mb-3 rounded bg-amber-50 p-2 text-sm text-amber-900">
+              This sentence cites no passage in the source. It is marked unverified.
+            </p>
+          )}
           <SourcePane raw={source.raw_content} spans={source.spans} active={activeRefs} />
         </section>
         <section className="space-y-4 overflow-y-auto bg-slate-50 p-6">
